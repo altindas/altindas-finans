@@ -101,7 +101,7 @@ Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bi
 * **Detaylı İşlem Geçmişi:** Alım ve satım işlemlerinizi, maliyetinizi ve güncel birim fiyatlarını tek bir ekranda karşılaştırın. Hızlı sorgulama ekranıyla piyasa fiyatlarına anında ulaşın.
 * **Reel Getiri (USD) Analizi:** TL bazında kâr ettiğiniz işlemlerin, geçmiş tarihli kur üzerinden USD bazlı gerçek getiri veya zararını şeffafça görün.
 * **Kapsamlı Kıyaslama (Benchmark):** Portföyünüzün büyümesini; Enflasyon, BIST 100, Ons/Gram Altın ve Gümüş karşısında canlı olarak test edin.
-* * **Dönemsel Performans:** Varlıklarınızın günlük, haftalık, aylık ve yıllık değişim trendlerini tek bir grafik üzerinden kolayca analiz edin.
+* **Dönemsel Performans:** Varlıklarınızın günlük, haftalık, aylık ve yıllık değişim trendlerini tek bir grafik üzerinden kolayca analiz edin.
 * **Çift Para Birimi & Gizlilik Modu:** Portföyünüzü tek dokunuşla TRY veya USD olarak görüntüleyin. Ortak alanlarda tek tuşla bakiyenizi gizleyin.
 
 ### 🛡️ 2. Bireysel Emeklilik (BES) Planlaması
