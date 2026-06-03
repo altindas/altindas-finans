@@ -149,4 +149,4 @@ Altindas Finans uygulaması; 6362 sayılı Sermaye Piyasası Kanunu kapsamında 
 
 * **GitHub:** [@altindas](https://github.com/altindas)
 * **Proje Bağlantısı:** [Altindas Finans Repo](https://github.com/altindas/altindas-finans)
-* **Email:** [mehmetaltindas@pm.me]
+* **Email:** mehmetaltindas@pm.me
