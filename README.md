@@ -98,9 +98,10 @@ Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bi
 ### 📊 1. Gelişmiş Portföy ve Varlık Takibi
 * **Çoklu Varlık Desteği:** Altın, Gümüş, Yatırım Fonu (TEFAS), Hisse Senedi (BIST), Eurobond, Döviz ve Nakit birikimlerinizi tek bir havuzdan yönetin.
 * **Canlı Piyasa Fiyatları:** Yatırım araçlarınızın güncel fiyatlarını ve anlık kâr/zarar durumunuzu özel grafiklerle izleyin.
-* **Detaylı İşlem Geçmişi:** Alım ve satım işlemlerinizi, maliyetinizi ve güncel birim fiyatlarını tek bir ekranda karşılaştırın.
+* **Detaylı İşlem Geçmişi:** Alım ve satım işlemlerinizi, maliyetinizi ve güncel birim fiyatlarını tek bir ekranda karşılaştırın. Hızlı sorgulama ekranıyla piyasa fiyatlarına anında ulaşın.
 * **Reel Getiri (USD) Analizi:** TL bazında kâr ettiğiniz işlemlerin, geçmiş tarihli kur üzerinden USD bazlı gerçek getiri veya zararını şeffafça görün.
 * **Kapsamlı Kıyaslama (Benchmark):** Portföyünüzün büyümesini; Enflasyon, BIST 100, Ons/Gram Altın ve Gümüş karşısında canlı olarak test edin.
+* * **Dönemsel Performans:** Varlıklarınızın günlük, haftalık, aylık ve yıllık değişim trendlerini tek bir grafik üzerinden kolayca analiz edin.
 * **Çift Para Birimi & Gizlilik Modu:** Portföyünüzü tek dokunuşla TRY veya USD olarak görüntüleyin. Ortak alanlarda tek tuşla bakiyenizi gizleyin.
 
 ### 🛡️ 2. Bireysel Emeklilik (BES) Planlaması
@@ -123,7 +124,10 @@ Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bi
 * **Tasarruf Grafikleri:** 3 Aylık, 6 Aylık ve Yıllık bazda dönemsel tasarruf oranlarınızı takip edin.
 
 ### 🤖 6. Kişisel Telegram Bot Entegrasyonu (Premium & İsteğe Bağlı)
-* **Takip Mesajları:** Portföy performans değişimlerini, harcama özetlerini ve yaklaşan ödeme bildirimlerini otomatik alın. Kalan harcama limitiniz azaldığında uyarı mesajı alın.
+* **Portföy Takip Mesajları:** Portföy performans değişimlerini, harcama özetlerini ve yaklaşan ödeme bildirimlerini otomatik alın. Kalan harcama limitiniz azaldığında uyarı mesajı alın.
+* **Harcama Takip Mesajları:** Haftalık ve aylık portföy ve harcama özetlerini alın..
+* **Ödeme Takip Mesajları:** İki hafta içerisindeki ödeme tutarlarınız Nakit(TRY) varlıklarınızdan yüksek olduğu durumlarda “Nakit İhtiyacı” uyarısı alın.
+* **Kategori Takip Mesajları:** Harcama kategorilerine ait bildirimler alın. Kategorinin %80’ine ulaştınız andan itibaren hem bildirim alın hem de günlük kalan harcama limitinizi öğrenin.
 * **Hızlı Veri Girişi:** Telegram üzerinden *"25 Market"* veya *"1200 Alışveriş 3taksit"* gibi mesajlar atarak harcamalarınızı sisteme saniyeler içinde kaydedin.
 
 ---
