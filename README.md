@@ -23,71 +23,114 @@ Uygulamanın arayüzünü ve özelliklerini hemen keşfetmek için aşağıdaki 
 
 Altindas Finans'ın sunduğu modülleri ve kullanıcı arayüzünü aşağıda detaylıca inceleyebilirsiniz:
 
-### 1. Ana Portföy Ekranı
+### Ana Portföy Ekranı
 Uygulamanın genel özetini sunan, toplam varlıklarınızı, güncel kâr/zarar durumunuzu ve finansal özetinizi tek bakışta görebileceğiniz merkezi kontrol panelidir.
 ![Ana Portföy Ekranı](gorsel_yolu/1_ana_portfoy.png)
 
-### 2. Portföy Sayfası - Varlıklar Ekranı
+### Portföy Sayfası - Varlıklar Ekranı
 Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin liste halinde detaylandırıldığı ve anlık değerlerinin takip edildiği ekrandır.
 ![Varlıklar Ekranı](gorsel_yolu/2_varliklar_ekrani.png)
 
-### 3. Bireysel Emeklilik (BES) Ekranı
+### Portföy Sayfası - Varlık İşlem Geçmişi Ekranı
+Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin geçmiş hareketlerinin görüntülenebildiği ve düzenlenebildiği ekrandır.
+![Varlıklar Ekranı](gorsel_yolu/2_varliklar_ekrani.png)
+
+### Portföy Sayfası - Varlık Ekleme Ekranı
+Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin portföye eklenebildiği ekrandır.
+![Varlıklar Ekranı](gorsel_yolu/2_varliklar_ekrani.png)
+
+### Bireysel Emeklilik (BES) Ekranı
 Aile bireylerinin BES hesaplarını, kurum ve kişi bazlı ayırarak güncel birikim tutarlarını, katkı paylarını ve getiri durumlarını izleyebileceğiniz özel sayfadır.
 ![BES Ekranı](gorsel_yolu/3_bes_ekrani.png)
 
-### 4. İşlemler Sayfası - Canlı Fiyat Sorgulama
+### Bireysel Emeklilik (BES) Ekranı
+Aile bireylerinin BES hesaplarının portföye otomatik işlenebilmesi için "Aylık BES Planlaması" ekranıdır. Belirlenen tarihlerde sistem otomatik olarak BES hesabına TRY Alım olarak işlem yapmaktadır.
+![BES Ekranı](gorsel_yolu/3_bes_ekrani.png)
+
+### İşlemler Sayfası - Canlı Fiyat Sorgulama
 Yatırım araçlarının anlık piyasa fiyatlarını arama çubuğu üzerinden hızlıca sorgulayıp, güncel verilerle doğru işlem kararları almanızı sağlayan modüldür.
 ![Canlı Fiyat Sorgulama](gorsel_yolu/4_canli_fiyat.png)
 
-### 5. İşlemler Sayfası - İşlem Kayıtları
+### İşlemler Sayfası - İşlem Kayıtları
 Geçmişte yaptığınız tüm alım ve satım işlemlerini, ilgili tarihteki maliyetlerinizi ve adet bazlı geçmiş verilerinizi kronolojik olarak listeleyen detay ekranıdır.
 ![İşlem Kayıtları](gorsel_yolu/5_islem_kayitlari.png)
 
-### 6. Geçmiş Sayfası - Hedef ve Ana Ekran
+### İşlemler Sayfası - Geçmmiş Kur ile Hesaplama
+Geçmişte yaptığınız tüm alım ve satım işlemlerini, ilgili tarihteki maliyetlerinizi ve ilgili tarihin USD kuru alınarak kar/zarar hesabınızı görüntülemenize yarar.
+![İşlem Kayıtları](gorsel_yolu/5_islem_kayitlari.png)
+
+### Geçmiş Sayfası - Hedef ve Ana Ekran
 Finansal özgürlük hedeflerinize ne kadar yaklaştığınızı, net tasarruf ivmenizi ve hedefinize kalan tahmini süreyi gösteren motivasyon odaklı sayfadır.
 ![Hedef ve Ana Ekran](gorsel_yolu/6_gecmis_hedef.png)
 
-### 7. Portföy Kıyaslama ve Performans Grafikleri
+### Portföy Kıyaslama ve Performans Grafikleri
 Portföyünüzün enflasyon, BIST 100, altın gibi temel göstergelere karşı performansını, varlıklarınızın dönemsel gelişimini ve trendini analiz eden detaylı grafik alanıdır.
 ![Performans Grafikleri](gorsel_yolu/7_performans_grafikleri.png)
 
-### 8. Giderler Sayfası Headerı
-Aylık toplam giderlerinizi, kullanıma kalan bütçenizi ve yaklaşan ödemelerinizi en üstte hap bilgi olarak özetleyen kullanıcı dostu başlıktır.
-![Giderler Header](gorsel_yolu/8_giderler_header.png)
+### Portföy Kıyaslama ve Performans Grafikleri
+Portföyünüzde yer alan varlıkların toplam tutarlarının zaman içerisindeki değişimleri (Portföy Gelişimi) ve birim fiyatlarının zaman içerisindeki değişimlerini (Varlık Performansı) görebileceğiniz detaylı grafik alanıdır.
+![Performans Grafikleri](gorsel_yolu/7_performans_grafikleri.png)
 
-### 9. Analiz Sayfası İlk Giriş
-Harcama alışkanlıklarınızı ve genel bütçe durumunuzu detaylandırmak için tasarlanmış geniş kapsamlı analiz modülünün ana görünümüdür.
-![Analiz Ana Giriş](gorsel_yolu/9_analiz_giris.png)
+### Geçmiş Veri Yönetimi Düzenleme Ekranı
+Portföyünüzde yer alan varlıkların toplam tutarları ve birim fiyatları günlük kayıt altına alınmaktadır. Geçmişe yönelik birim fiyat ve toplam tutarları değiştirebileceğiniz ekrandır.
+![Performans Grafikleri](gorsel_yolu/7_performans_grafikleri.png)
 
-### 10. Ödeme, Harcama Analizi ve Trend Grafikleri
-Harcamalarınızın aylık trendini, yaklaşan ödeme takviminizi ve bütçenizin zaman içindeki değişimini görselleştiren dinamik grafik ekranıdır.
-![Harcama Analizi](gorsel_yolu/10_harcama_analizi.png)
+### Geçmiş Sayfası - Enflasyon Butonu
+Portföyünüzde yer alan varlıkları kıyaslamak amacıyla her ay açıklanan yıllık TÜİK Enflasyon verisini gireceğiniz ekrandır. Yıllık gireceğiniz enflasyon verisi aylık kümülatif olarak hesaplanmaktadır.
+![Performans Grafikleri](gorsel_yolu/7_performans_grafikleri.png)
 
-### 11. Reel Getiri ve Geçmiş USD Kuru Analizi
-İşlemin yapıldığı tarihteki geçmiş döviz kurunu baz alarak, yatırımlarınızın USD cinsinden "gerçek" getiri veya zararını şeffafça sunan analiz detayıdır.
-![Reel Getiri USD](gorsel_yolu/11_gecmis_usd_kuru.png)
-
-### 12. Bütçe Planlama ve Kart Ayarları
-Dinamik kredi kartı taksitlendirmelerini, hesap kesim tarihlerini ve aylık hedef bütçe sınırlarınızı kişiselleştirebileceğiniz ayar ekranıdır.
-![Bütçe ve Kart Ayarları](gorsel_yolu/12_butce_kart_ayarlari.png)
-
-### 13. Geçmiş Veri Yönetimi Düzenle Butonu
+### Geçmiş Veri Yönetimi Düzenle Butonu
 Geçmiş dönemlerde girdiğiniz finansal kayıtları veya harcamaları esnek bir şekilde güncelleyip, olası hataları düzeltebileceğiniz pratik yönetim aracıdır.
 ![Geçmiş Veri Düzenleme](gorsel_yolu/13_veri_duzenle.png)
 
-### 14. Abonelikleri Aktar Butonu
+### Giderler Sayfası Headerı
+Aylık toplam giderlerinizi, kullanıma kalan bütçenizi ve yaklaşan ödemelerinizi en üstte hap bilgi olarak özetleyen kullanıcı dostu başlıktır.
+![Giderler Header](gorsel_yolu/8_giderler_header.png)
+
+### Giderler Sayfası Son 5 Gün Bildirim Ekranı
+Son 5 gün içerisinde yaklaşan İşlem veya Ödemelerinizi görebileceğiniz ekranın en üst tarafında yer alan kutucuktur.
+![Giderler Header](gorsel_yolu/8_giderler_header.png)
+
+### Giderler Sayfası Detaylı Kart Raporu
+Ödeme kartınıza tıkladığınız zaman o karta ait harcamalarınızı görüntüleyebileceğiniz ve düzenleyebileceğiniz ekrandır.
+![Giderler Header](gorsel_yolu/8_giderler_header.png)
+
+### Giderler Sayfası Bütçe Planlama Ekranı
+Planlama butonuna tıkladığı zaman aylık harcama bütçenizi, harcama kategorilerinizi ve kart ödeme kurallarını belirleyebildiğiniz ekrandır.
+![Giderler Header](gorsel_yolu/8_giderler_header.png)
+
+### Giderler Sayfası Gider Ekleme Ekranı
+Gider ekleme butonuna tıkladığınız zaman, daha önce belirlediğiniz kart ödeme kuralları çerçevesinde, ödeme tarihini ve kart adını otomatik olarak belirler. Eğer harcamanız Nakit ise doğrudan ödendi olarak varsayılarak portföyünüzdeki TRY Varlığından düşmektedir.
+Aksiyon takibi yapılsın mı? kutucuğu ise işlemleriniz içindir. Eğer işaretlersiniz belirlediğiniz harcama tarihine geldiği zaman "Son 5 Gün Bildirim Ekranında" bekleyen işlem olarak görüntülenmektedir. (Örneğin MTV Ödemesi son ödeme tarihi 31 Temmuz, Ödediğiniz kartın son ödeme tarihi ise 25 Ağustos. 26 Temmuz tarihine gelindiği andan itibaren MTV ödemesini size hatırlatmak için ekranda belirecektir.
+![Giderler Header](gorsel_yolu/8_giderler_header.png)
+
+### Abonelikleri Aktar Butonu
 Her ay tekrarlayan fatura, aidat ve dijital abonelik gibi sabit giderlerinizi tek bir tuşla kopyalayarak otomatik olarak sonraki aya aktaran zaman kazandırıcı özelliktir.
 ![Abonelik Aktar](gorsel_yolu/14_abonelik_aktar.png)
 
-### 15. Analiz Sayfası - Geçmiş Gider Yönetimi
+### Bütçe Planlama ve Kart Ayarları
+Dinamik kredi kartı taksitlendirmelerini, hesap kesim tarihlerini ve aylık hedef bütçe sınırlarınızı kişiselleştirebileceğiniz ayar ekranıdır.
+![Bütçe ve Kart Ayarları](gorsel_yolu/12_butce_kart_ayarlari.png)
+
+### Analiz Sayfası İlk Giriş
+Harcama alışkanlıklarınızı ve genel bütçe durumunuzu detaylandırmak için tasarlanmış geniş kapsamlı analiz modülünün ana görünümüdür. Ayrıca aracınıza ait masrafları ve km bilgilerini gider eklerken girerseniz ortalama maliyeti, TL/KM ve LT/100km tüketimlerini görüntüleyebilirsiniz.
+![Analiz Ana Giriş](gorsel_yolu/9_analiz_giris.png)
+
+### Ödeme, Harcama Analizi ve Trend Grafikleri
+Ödemelerinizin ve harcamalarınızın aylık trendini, yaklaşan ödeme takviminizi ve bütçenizin zaman içindeki değişimini görselleştiren dinamik grafik ekranıdır.
+![Ödeme Analizi](gorsel_yolu/10_harcama_analizi.png)
+![Harcama Analizi](gorsel_yolu/10_harcama_analizi.png)
+![Harcama Trendi](gorsel_yolu/10_harcama_analizi.png)
+
+### Analiz Sayfası - Geçmiş Gider Yönetimi
 Analiz raporlarını incelerken fark ettiğiniz geçmiş dönem gider kayıtlarına doğrudan müdahale edip hızlıca düzenlemenizi sağlayan kısayol alanıdır.
 ![Geçmiş Gider Yönetimi](gorsel_yolu/15_analiz_gider_duzenle.png)
 
-### 16. Analiz Sayfası - Pasta Grafikleri
+### Analiz Sayfası - Pasta Grafikleri
 İlgili aydaki harcamalarınızı kategorilerine (market, ulaşım, fatura vb.) göre ayırarak, bütçenizin hangi alanlara dağıldığını oransal olarak net bir şekilde gösteren görsel analizdir.
 ![Pasta Grafikleri](gorsel_yolu/16_pasta_grafik.png)
 
-### 17. Telegram Bağlantı Kutucuğu
+### Telegram Bağlantı Kutucuğu
 Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bildirimler almanızı ve doğal dilde mesajlarla hızlı veri girişi yapmanızı sağlayan bağlantı alanıdır.
 ![Telegram Entegrasyonu](gorsel_yolu/17_telegram_baglanti.png)
 
