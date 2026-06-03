@@ -1,2 +1,2 @@
-# altindas-finans
+# Altindas Finans Paneli
 Altindas Finans Paneli
