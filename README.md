@@ -30,7 +30,7 @@ Uygulamanın genel özetini sunan, toplam varlıklarınızı, güncel kâr/zarar
 </p>
 
 ### Portföy Sayfası - Varlıklar Ekranı
-Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin liste halinde detaylandırıldığı ve anlık değerlerinin takip edildiği ekrandır.
+Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin liste halinde detaylandırıldığı ve anlık değerlerinin takip edildiği ekrandır. Veriler eklendikçe her bir kartın içerisinde o ürüne ait fiyat grafikleri oluşacaktır.
 <p align="center">
   <img src="gorseller/Portfoy%20ana%20syafa%20devamı.jpg" alt="Portföy Sayfası - Varlıklar Ekranı" width="300">
 </p>
