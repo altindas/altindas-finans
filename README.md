@@ -25,7 +25,7 @@ Altindas Finans'ın sunduğu modülleri ve kullanıcı arayüzünü aşağıda d
 
 ### Ana Portföy Ekranı
 Uygulamanın genel özetini sunan, toplam varlıklarınızı, güncel kâr/zarar durumunuzu ve finansal özetinizi tek bakışta görebileceğiniz merkezi kontrol panelidir.
-![Ana Portföy Ekranı]([gorsel_yolu/1_ana_portfoy.png](https://github.com/altindas/altindas-finans/blob/main/gorseller/Portfoy%20ana%20sayfa.jpg))
+![Ana Portföy Ekranı]([https://github.com/altindas/altindas-finans/blob/main/gorseller/Portfoy%20ana%20sayfa.jpg])
 
 ### Portföy Sayfası - Varlıklar Ekranı
 Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin liste halinde detaylandırıldığı ve anlık değerlerinin takip edildiği ekrandır.
