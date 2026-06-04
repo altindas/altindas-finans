@@ -114,7 +114,7 @@ Portföyünüzde yer alan varlıkları kıyaslamak amacıyla her ay açıklanan 
   <img src="gorseller/enflasyon%20oranı.jpg" alt="Geçmiş Sayfası - Enflasyon Butonu" width="300">
 </p>
 
-  ### Giderler Sayfası Headerı ve 5 Gün Bildirim Ekranı
+### Giderler Sayfası Headerı ve 5 Gün Bildirim Ekranı
 Aylık toplam giderlerinizi, kullanıma kalan bütçenizi ve yaklaşan ödemelerinizi en üstte hap bilgi olarak özetleyen kullanıcı dostu başlıktır.
 <p align="center">
   <img src="gorseller/giderler%20sayfası%20ana%20ekran%20ve%205%20gün%20bidirim%20merkezi.jpg" alt="Giderler Sayfası Headerı" width="300">
