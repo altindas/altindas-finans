@@ -170,16 +170,16 @@ Harcama alışkanlıklarınızı ve genel bütçe durumunuzu detaylandırmak iç
   <img src="gorseller/Analiz%20harcama%20trendi.jpg" alt="Harcama Trendi" width="300">
 </p>
 
-### Analiz Sayfası - Geçmiş Gider Yönetimi
-Analiz raporlarını incelerken fark ettiğiniz geçmiş dönem gider kayıtlarına doğrudan müdahale edip hızlıca düzenlemenizi sağlayan kısayol alanıdır.
-<p align="center">
-  <img src="gorseller/gider_gecmisi_yonetimi.jpeg" alt="Analiz Sayfası - Geçmiş Gider Yönetimi" width="300">
-</p>
-
 ### Analiz Sayfası - Pasta Grafikleri
 İlgili aydaki harcamalarınızı kategorilerine (market, ulaşım, fatura vb.) göre ayırarak, bütçenizin hangi alanlara dağıldığını oransal olarak net bir şekilde gösteren görsel analizdir.
 <p align="center">
   <img src="gorseller/analiz%20ödeme%20analizi%20pasta%20grafiği.jpg" alt="Analiz Sayfası - Pasta Grafikleri" width="300">
+</p>
+
+### Analiz Sayfası - Geçmiş Gider Yönetimi
+Analiz raporlarını incelerken fark ettiğiniz geçmiş dönem gider kayıtlarına doğrudan müdahale edip hızlıca düzenlemenizi sağlayan kısayol alanıdır.
+<p align="center">
+  <img src="gorseller/gider_gecmisi_yonetimi.jpeg" alt="Analiz Sayfası - Geçmiş Gider Yönetimi" width="300">
 </p>
 
 ### Telegram Bağlantı Kutucuğu
