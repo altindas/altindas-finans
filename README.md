@@ -236,7 +236,7 @@ Kişisel Telegram botunuz size ödemenin olduğu gün ve bir gün öncesinde uya
   <img src="gorseller/telegram%20bugün%20ödeme.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
 </p>
 <p align="center">
-  <img src="gorseller/telegram%20yarın%20ödeme.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
+  <img src="gorseller/telegram%20ay%20sonu%20raporu.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
 </p>
 
 * ### Telegram Ödeme İçin Nakit Hatırlatıcısı
