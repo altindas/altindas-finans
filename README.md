@@ -72,7 +72,7 @@ Geçmişte yaptığınız tüm alım ve satım işlemlerini, ilgili tarihteki ma
   <img src="gorseller/İşlemler%20sayfası.jpg" alt="İşlemler Sayfası - İşlem Kayıtları" width="300">
 </p>
 
-### İşlemler Sayfası - Geçmmiş Kur ile Hesaplama
+### İşlemler Sayfası - Geçmiş Kur ile Hesaplama
 Geçmişte yaptığınız tüm alım ve satım işlemlerini, ilgili tarihteki maliyetlerinizi ve ilgili tarihin USD kuru alınarak kar/zarar hesabınızı görüntülemenize yarar.
 <p align="center">
   <img src="gorseller/İşlemler%20sayfası%20kart%20detayı.jpg" alt="İşlemler Sayfası - Geçmmiş Kur ile Hesaplama" width="300">
@@ -132,6 +132,12 @@ Planlama butonuna tıkladığı zaman aylık harcama bütçenizi, harcama katego
   <img src="gorseller/Bütçe%20planlama.jpg" alt="Giderler Sayfası Bütçe Planlama Ekranı" width="300">
 </p>
 
+### Bütçe Planlama ve Kart Ayarları
+Dinamik kredi kartı taksitlendirmelerini, hesap kesim tarihlerini ve aylık hedef bütçe sınırlarınızı kişiselleştirebileceğiniz ayar ekranıdır.
+<p align="center">
+  <img src="gorseller/Bütçe%20planlama%20kart%20ayarları.jpg" alt="Bütçe Planlama ve Kart Ayarları" width="300">
+</p>
+
 ### Giderler Sayfası Gider Ekleme Ekranı
 Gider ekleme butonuna tıkladığınız zaman, daha önce belirlediğiniz kart ödeme kuralları çerçevesinde, ödeme tarihini ve kart adını otomatik olarak belirler. Eğer harcamanız Nakit ise doğrudan ödendi olarak varsayılarak portföyünüzdeki TRY Varlığından düşmektedir.
 Aksiyon takibi yapılsın mı? kutucuğu ise işlemleriniz içindir. Eğer işaretlersiniz belirlediğiniz harcama tarihine geldiği zaman "Son 5 Gün Bildirim Ekranında" bekleyen işlem olarak görüntülenmektedir. (Örneğin MTV Ödemesi son ödeme tarihi 31 Temmuz, Ödediğiniz kartın son ödeme tarihi ise 25 Ağustos. 26 Temmuz tarihine gelindiği andan itibaren MTV ödemesini size hatırlatmak için ekranda belirecektir.
@@ -145,11 +151,6 @@ Her ay tekrarlayan fatura, aidat ve dijital abonelik gibi sabit giderlerinizi te
   <img src="gorseller/Abonelikleri%20aktar.jpg" alt="Abonelikleri Aktar Butonu" width="300">
 </p>
 
-### Bütçe Planlama ve Kart Ayarları
-Dinamik kredi kartı taksitlendirmelerini, hesap kesim tarihlerini ve aylık hedef bütçe sınırlarınızı kişiselleştirebileceğiniz ayar ekranıdır.
-<p align="center">
-  <img src="gorseller/Bütçe%20planlama%20kart%20ayarları.jpg" alt="Bütçe Planlama ve Kart Ayarları" width="300">
-</p>
 
 ### Analiz Sayfası İlk Giriş
 Harcama alışkanlıklarınızı ve genel bütçe durumunuzu detaylandırmak için tasarlanmış geniş kapsamlı analiz modülünün ana görünümüdür. Ayrıca aracınıza ait masrafları ve km bilgilerini gider eklerken girerseniz ortalama maliyeti, TL/KM ve LT/100km tüketimlerini görüntüleyebilirsiniz.
