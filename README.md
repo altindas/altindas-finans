@@ -215,7 +215,7 @@ Kişisel Telegram botunuz size her haftanın son günü akşam saatlerinde hafta
 * ### Telegram Aylık Finans Raporu
 Kişisel Telegram botunuz size her ayın 1. günü geçmiş aya dair Varlık durumunuzu, Kar/zarar durumunu ve toplam harcamanızı içeren bir tablo sunar. 
 <p align="center">
-  <img src="gorseller/telegram%20ay%20sonu%20raporu.jpg" alt="Telegram Aylık Finans Raporu" width="300">
+  <img src="gorseller/telegram%20yarın%20ödeme.jpg" alt="Telegram Aylık Finans Raporu" width="300">
 </p>
 
 * ### Telegram Genel Bütçe Alarmı
