@@ -184,7 +184,7 @@ Kişisel Telegram botunuza hızlıca nakit harcamnızı ekleyebilirsiniz. Sistem
 
 ### 📊 1. Gelişmiş Portföy ve Varlık Takibi
 * **Çoklu Varlık Desteği:** Altın, Gümüş, Yatırım Fonu (TEFAS), Hisse Senedi (BIST), Eurobond, Döviz ve Nakit birikimlerinizi tek bir havuzdan yönetin.
-* **Canlı Piyasa Fiyatları:** Yatırım araçlarınızın güncel fiyatlarını ve anlık kâr/zarar durumunuzu özel grafiklerle izleyin.
+* **Canlı Piyasa Fiyatları:** Yatırım araçlarınızın güncel fiyatlarını ve anlık kâr/zarar durumunuzu özel grafiklerle izleyin. (Emtia fiyatlarının piyasa satış fiyatlarını göstermektedir.)
 * **Detaylı İşlem Geçmişi:** Alım ve satım işlemlerinizi, maliyetinizi ve güncel birim fiyatlarını tek bir ekranda karşılaştırın. Hızlı sorgulama ekranıyla piyasa fiyatlarına anında ulaşın.
 * **Reel Getiri (USD) Analizi:** TL bazında kâr ettiğiniz işlemlerin, geçmiş tarihli kur üzerinden USD bazlı gerçek getiri veya zararını şeffafça görün.
 * **Kapsamlı Kıyaslama (Benchmark):** Portföyünüzün büyümesini; Enflasyon, BIST 100, Ons/Gram Altın ve Gümüş karşısında canlı olarak test edin.
