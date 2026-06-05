@@ -257,6 +257,15 @@ Kişisel Telegram botunuza hızlıca nakit harcamnızı ekleyebilirsiniz. Sistem
   <img src="gorseller/telegram%20hızlı%20veri%20nakit.jpg" alt="Telegram Harcama Gideri - Nakit" width="300">
 </p>
 
+### Güvenlik ve Gizlilik
+Güvenliğiniz ve gizliliğinizi tam sağlamak amacıyla uygulamaya pin/parmak izi/face id olarak girmek isterseniz sol üst taraftaki açılır menüden güvenlik simgesini tıklayarak aktifleştirebilirsiniz.
+<p align="center">
+  <img src="gorseller/acilir_menu.png" alt="Açılır Menü" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/pin_parmakizi.png" alt="Açılır Menü" width="300">
+</p>
+
 ---
 
 ## 🌟 Öne Çıkan Özellikler
