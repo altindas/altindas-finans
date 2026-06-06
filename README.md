@@ -208,49 +208,49 @@ Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bi
   <img src="gorseller/Telegram%20premium%20kod.jpg" alt="Telegram Bağlantı Kutucuğu" width="300">
 </p>
 
-** ### Telegram Günlük Harcama Özeti Tablosu
+* ### Telegram Günlük Harcama Özeti Tablosu
 Kişisel Telegram botunuzdan size özel her gün akşam günü özetleyen bir tablo gönderir.
 <p align="center">
   <img src="gorseller/telegram_gunluk_ozet.jpeg" alt="Telegram Günlük Harcama Özeti Tablosu" width="300">
 </p>
 
-** ### Telegram Varlık Performans Karnesi
+* ### Telegram Varlık Performans Karnesi
 Kişisel Telegram botunuz size her sabah varlılarınızın günlük, haftlaık, aylık birim fiyat değişimlerini tablo haline getirip atar.
 <p align="center">
   <img src="gorseller/telegram%20varlık%20performansı.jpg" alt="Telegram Varlık Performans Karnesi" width="300">
 </p>
 
-** ### Telegram Günlük Finans Raporu
+* ### Telegram Günlük Finans Raporu
 Kişisel Telegram botunuz size her sabah güncel portföy değerinizi, net karınızı, toplam borcunuzu gönderir. Portföy değişimlerini ve Kar değişimlerini günlük, haftalık, aylık değişimler halinde sizlere sunar.
 <p align="center">
   <img src="gorseller/telegram%20günlük%20finans.jpg" alt="Telegram Günlük Finans Raporu" width="300">
 </p>
 
-** ### Telegram Haftalık Finans Raporu
+* ### Telegram Haftalık Finans Raporu
 Kişisel Telegram botunuz size her haftanın son günü akşam saatlerinde haftayı özetleyen bir rapor sunar. Haftalık harcama özetini ve belirlediğiniz kategorilerin ne kadarının kullanıldığını sizlere sunar.
 <p align="center">
   <img src="gorseller/telegram%20haftalık%20finans%20raporu.jpg" alt="Telegram Haftalık Finans Raporu" width="300">
 </p>
 
-** ### Telegram Aylık Finans Raporu
+* ### Telegram Aylık Finans Raporu
 Kişisel Telegram botunuz size her ayın 1. günü geçmiş aya dair Varlık durumunuzu, Kar/zarar durumunu ve toplam harcamanızı içeren bir tablo sunar. 
 <p align="center">
   <img src="gorseller/telegram%20yarın%20ödeme.jpg" alt="Telegram Aylık Finans Raporu" width="300">
 </p>
 
-** ### Telegram Genel Bütçe Alarmı
+* ### Telegram Genel Bütçe Alarmı
 Kişisel Telegram botunuz size bütçenizin %80'ini aştığınız andan itibaren her gün aynı saatte güncel bütçe durumunuzu gösteren bir tablo gönderir.
 <p align="center">
   <img src="gorseller/telegram_butce_kontrol.jpg" alt="Telegram Genel Bütçe Alarmı" width="300">
 </p>
 
-** ### Telegram Piyasa Sert Hareketler Alarmı
+* ### Telegram Piyasa Sert Hareketler Alarmı
 Kişisel Telegram botunuz size portföyünüzdeki bir varlığın bir gün içerisinde %2'yi aşan bir değişim olduğu zaman anında haber verir.
 <p align="center">
   <img src="gorseller/telegram%20sert%20hareketler.jpg" alt="Telegram Piyasa Sert Hareketler Alarmı" width="300">
 </p>
 
-** ### Telegram Ödeme Hatırlatıcısı
+* ### Telegram Ödeme Hatırlatıcısı
 Kişisel Telegram botunuz size ödemenin olduğu gün ve bir gün öncesinde uyarı mesajı gönderir.
 <p align="center">
   <img src="gorseller/telegram%20bugün%20ödeme.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
@@ -259,19 +259,19 @@ Kişisel Telegram botunuz size ödemenin olduğu gün ve bir gün öncesinde uya
   <img src="gorseller/telegram%20ay%20sonu%20raporu.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
 </p>
 
-** ### Telegram Ödeme İçin Nakit Hatırlatıcısı
+* ### Telegram Ödeme İçin Nakit Hatırlatıcısı
 Kişisel Telegram botunuz size önümüzdeki 14 günün ödemesi kadar TRY varlığınız yok ise bir uyarı mesajı gönderir.
 <p align="center">
   <img src="gorseller/telegram%20iki%20haftalık%20ödeme.jpg" alt="Telegram Ödeme İçin Nakit Hatırlatıcısı" width="300">
 </p>
 
-** ### Telegram Harcama Gideri
+* ### Telegram Harcama Gideri
 Kişisel Telegram botunuza hızlıca giderlerinizi ekleyebilirsiniz. Sisteme belirlediğiniz kart kuralları dahilinde ödeme kartını ve ödeme tarihini otomatik çeker ve sisteme işler.
 <p align="center">
   <img src="gorseller/telegram%20veri%20girişi.jpg" alt="Telegram Harcama Gideri" width="300">
 </p>
 
-** ### Telegram Harcama Gideri - Nakit
+* ### Telegram Harcama Gideri - Nakit
 Kişisel Telegram botunuza hızlıca nakit harcamnızı ekleyebilirsiniz. Sistem nakit harcamalarınızı doğrudan portföyünüzdeki TRY varlığından "ödendi" olarak düşer.
 <p align="center">
   <img src="gorseller/telegram%20hızlı%20veri%20nakit.jpg" alt="Telegram Harcama Gideri - Nakit" width="300">
