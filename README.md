@@ -345,3 +345,32 @@ Altindas Finans uygulaması; 6362 sayılı Sermaye Piyasası Kanunu kapsamında 
 * **GitHub:** [@altindas](https://github.com/altindas)
 * **Proje Bağlantısı:** [Altindas Finans Repo](https://github.com/altindas/altindas-finans)
 * **Email:** mehmetaltindas@pm.me
+
+
+
+
+## 📸 Playstore Görüntüleri
+<p align="center">
+  <img src="gorseller/Playstore_1_Portfoy.png" alt="Portföy" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_2_Varliklar.png" alt="Varlıklar" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_3_Hedefler.png" alt="Hedefler" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_4_Analiz.png" alt="Analiz" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_5_Odemeler.png" alt="Ödemeler" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_7_Gider_Takibi.png" alt="Gider Takibi" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_7_Finansal_Analiz.png" alt="Finansal Analiz" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/Playstore_8_Tasarruf_Karnesi.png" alt="Tasarruf Karnesi" width="300">
+</p>
