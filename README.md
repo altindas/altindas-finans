@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="gorseller/circular_icon.png" width="150" height="150" alt="Logo">
+</p>
+
 # Altindas Finans 📊💰
 
 > **Varlık, BES ve gider takibi tek ekranda! Banka şifresi girmeden bütçenizi yönetin.**
