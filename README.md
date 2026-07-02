@@ -7,7 +7,7 @@
   <p>
     <!-- Google Play Butonu -->
     <a href="https://play.google.com/store/apps/details?id=com.altindas.finans" target="_blank">
-      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="60" alt="Get it on Google Play" style="vertical-align: middle;" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="50" alt="Get it on Google Play" style="vertical-align: middle;" />
     </a>
   </p>
 </div>
