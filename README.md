@@ -1,6 +1,27 @@
 <p align="center">
   <img src="gorseller/circular_icon.png" width="150" height="150" alt="Logo">
 </p>
+<div align="center">
+  <!-- Uygulama Logosu -->
+  <a href="https://altindas.github.io/altindas-finans/">
+    <img src="https://altindas.github.io/altindas-finans/gorseller/circular_icon.png" width="110" height="110" alt="Altindas Finans Logo" style="border-radius: 22px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);" />
+  </a>
+
+  <h2>Altindas Finans</h2>
+  <p>Kişisel bütçe, varlık, BES ve portföy yönetimi platformu.</p>
+
+  <!-- İndirme ve Keşfetme Butonları -->
+  <p>
+    <!-- Google Play Butonu -->
+    <a href="https://play.google.com/store/apps/details?id=com.altindas.finans" target="_blank">
+      <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" height="60" alt="Get it on Google Play" style="vertical-align: middle;" />
+    </a>
+    <!-- Web Sitesi Butonu (Shields.io Entegrasyonu) -->
+    <a href="https://altindas.github.io/altindas-finans/" target="_blank">
+      <img src="https://img.shields.io/badge/Web_Sitesi-Ke%C5%9Ffetmeye%20Ba%C5%9Fla!-10B981?style=for-the-badge&logo=googlechrome&logoColor=white" height="40" alt="Web Sitesi" style="vertical-align: middle; margin-left: 10px; margin-bottom: 10px;" />
+    </a>
+  </p>
+</div>
 
 # Altindas Finans 📊💰
 
