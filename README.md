@@ -7,7 +7,7 @@
   <p>
     <!-- Google Play Butonu -->
     <a href="https://play.google.com/store/apps/details?id=com.altindas.finans" target="_blank">
-      <img src="gorseller/playstore.png" height="50" alt="Get it on Google Play" style="vertical-align: middle;" />
+      <img src="gorseller/playstore1.png" height="50" alt="Get it on Google Play" style="vertical-align: middle;" />
     </a>
   </p>
 </div>
