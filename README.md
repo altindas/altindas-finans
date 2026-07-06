@@ -241,7 +241,7 @@ Telegram entegrasyonu kullanmak istemeyen kullanıcılar için tasarlanan yeni b
 * ### Telegram Bağlantı Kutucuğu
 Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bildirimler almanızı ve doğal dilde mesajlarla hızlı veri girişi yapmanızı sağlayan bağlantı alanıdır.
 <p align="center">
-  <img src="gorseller/Telegram%20premium%20kod.jpg" alt="Telegram Bağlantı Kutucuğu" width="300">
+  <img src="gorseller/Telegrambotpencere.jpg" alt="Telegram Bağlantı Kutucuğu" width="300">
 </p>
 
 * ### Telegram Günlük Harcama Özeti Tablosu
