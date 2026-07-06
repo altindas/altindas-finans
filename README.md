@@ -171,6 +171,9 @@ Aksiyon takibi yapılsın mı? kutucuğu ise işlemleriniz içindir. Eğer işar
 <p align="center">
   <img src="gorseller/yenigiderkm.jpg" alt="Giderler Sayfası Gider Ekleme Ekranı" width="300">
 </p>
+<p align="center">
+  <img src="gorseller/yakit.jpg" alt="Giderler Sayfası Gider Ekleme Ekranı" width="300">
+</p>
 
 ### Abonelikleri Aktar Butonu
 Her ay tekrarlayan fatura, aidat ve dijital abonelik gibi sabit giderlerinizi tek bir tuşla kopyalayarak otomatik olarak sonraki aya aktaran zaman kazandırıcı özelliktir.
