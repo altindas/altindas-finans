@@ -216,6 +216,28 @@ Ana ekrana ekleyeceğiniz "Gider Ekle" ve "Varlık Ekle" widgetleri, hayatın ko
   <img src="gorseller/varlik_kaydedildi_bildirim.jpg" alt="Varlık - Başarılı İşlem Bildirim" width="300">
 </p>
 
+* ### Yeni "Mesajlar" (Uygulama İçi Bildirim Merkezi) Ekranı
+Telegram entegrasyonu kullanmak istemeyen kullanıcılar için tasarlanan yeni bildirim merkezidir. Bütçe limit uyarıları, anlık sert hareket alarmları, otomatik BES/Maaş işlem onayları, bütçe uyarılarını ve periyodik raporlar doğrudan bu sekme altından takip edilebilir.
+* **Zengin Raporlama:** Günlük, haftalık ve aylık bütçe/durum özetlerini, bakiye değişimlerini ve otomatik işlemlerin onay bildirimlerini anlık olarak uygulama içinden alın.
+* **Tarihli Bulut Sorguları:** Belirli bir güne ait tüm eski bildirimlerinize, zaman sınırı olmaksızın, nokta atışı tarih filtreleme motoruyla anında ulaşın.
+* **Tek Tuşla Temizlik ve Gizlilik:** Deneme veya eski bildirimlerinizi dilediğiniz an tek bir tuşla döküman bazlı silin. Gizlilik modu aktifken, tüm mesaj gövdesindeki fiyat ve adetlerin otomatik olarak maskelenmesini (`****`) sağlayın.
+* **Akıllı Görsel Uyarı Sistemi:** Okunmamış yeni bir bildirim aldığınızda, alt navigasyon barındaki Mesajlar simgesi parlayan altın sarısı renge dönüşür ve mavi bildirim noktasıyla sizi sessizce uyarır.
+* **Anlık Sistem Bildirimleri:** Tüm kritik bütçe, bakiye ve piyasa raporlarını uygulamayı açmanıza gerek kalmadan doğrudan telefonunuzun bildirim merkezinden okuyabilir; bildirimlere dokunarak doğrudan "Mesajlar" sekmesinden detaylı inceleme ekranına geçiş yapabilirsiniz.
+* **Zahmetsiz Okundu Senkronizasyonu:** Mesajlar sekmesine geçiş yaptığınız an, tüm okunmamış bildirimler arka planda otomatik olarak okundu olarak işaretlenir ve bildirim simgeleri ek bir tıklama gerekmeden kendiliğinden sıfırlanır.
+<p align="center">
+  <img src="gorseller/mesajlar_sayfasi_bildirim.jpg" alt="Yeni Mesajlar Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/mesajlar_sayfasi_android_bildirim.jpg" alt="Yeni Mesajlar Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/mesajlar_sayfasi_raporlar1.jpg" alt="Yeni Mesajlar Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/mesajlar_sayfasi_raporlar2.jpg" alt="Yeni Mesajlar Ekranı" width="300">
+</p>
+
+
 * ### Telegram Bağlantı Kutucuğu
 Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bildirimler almanızı ve doğal dilde mesajlarla hızlı veri girişi yapmanızı sağlayan bağlantı alanıdır.
 <p align="center">
