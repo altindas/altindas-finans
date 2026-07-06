@@ -158,6 +158,19 @@ Aksiyon takibi yapılsın mı? kutucuğu ise işlemleriniz içindir. Eğer işar
 <p align="center">
   <img src="gorseller/Yeni%20gider%20ekle.jpg" alt="Giderler Sayfası Gider Ekleme Ekranı" width="300">
 </p>
+<p align="center">
+  <img src="gorseller/bildirimmerkezi5gun.jpg" alt="Giderler Sayfası Gider Ekleme Ekranı" width="300">
+</p>
+
+### Koşullu Araç Veri Girişi ve Yakıt Verimliliği Analizi
+* **Koşullu Arayüz Entegrasyonu:** "Gider Türü" alanından *Akaryakıt*, *Araç Servis*, *Bakım*, *Kasko*, *Sigorta* veya *MTV* gibi araç odaklı bir kategori seçildiğinde, form üzerinde dinamik olarak **"Araç Veri Girişi"** kartı açılır. Diğer harcamalarda bu alan gizli kalarak arayüz karmaşası önlenir.
+* **Kilometre ve Tüketim Kaydı:** Her yakıt alımında veya servis bakımında aracınızın güncel kilometresini (km) ve aldığınız yakıt miktarını (litre) bütçe kaydıyla birlikte sisteme işleyebilirsiniz.
+* **Anlık Verimlilik Hesabı (TL/KM):** Sistem, girdiğiniz kilometre değerini bir önceki yakıt alım kilometrenizle kıyaslayarak katettiğiniz mesafeyi bulur ve bu mesafeye göre **TL/KM** oranını anında hesaplayarak sizi bilgilendirir.
+* **Ortalama Tüketim Analizi (LT/100KM):** Alınan yakıtın litre bilgisi ve katedilen mesafe üzerinden aracınızın **LT/100km** verimlilik performansını çıkartır.
+* **Dönemsel Maliyet Dağılımı:** Tüm araç harcamalarınızı tek bir çatı altında toplayarak, aylık ortalama araç giderlerinizi, sigorta, bakım ve MTV gibi periyodik masrafların bütçenizdeki gerçek payını analiz grafikleriyle görüntüler.
+<p align="center">
+  <img src="gorseller/yenigiderkm.jpg" alt="Giderler Sayfası Gider Ekleme Ekranı" width="300">
+</p>
 
 ### Abonelikleri Aktar Butonu
 Her ay tekrarlayan fatura, aidat ve dijital abonelik gibi sabit giderlerinizi tek bir tuşla kopyalayarak otomatik olarak sonraki aya aktaran zaman kazandırıcı özelliktir.
