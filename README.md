@@ -237,6 +237,12 @@ Telegram entegrasyonu kullanmak istemeyen kullanıcılar için tasarlanan yeni b
   <img src="gorseller/mesajlar_sayfasi_raporlar2.jpg" alt="Yeni Mesajlar Ekranı" width="300">
 </p>
 
+### Birleşik Günlük Finans Ajandası
+* **Birleşik Günlük Finans Ajandası:** Sabah saatlerinde gönderilen tüm dağınık bildirimler ve alarmlar tek bir çatı altında birleştirildi! Her sabah saat 09:00'da; bugün ve yarın ödenecekleri, son 5 gündeki yaklaşan ödemeleri, bekleyen aksiyonları ve 14 günlük nakit/likidite durum analizini tek bir özet ajanda halinde hem telefon bildirim panelinden hem de uygulama içinden alabilirsiniz.
+<p align="center">
+  <img src="gorseller/bildirimmerkezi.jpg" alt="Birlesik Gunluk Ajanda" width="300">
+</p>
+
 
 * ### Telegram Bağlantı Kutucuğu
 Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bildirimler almanızı ve doğal dilde mesajlarla hızlı veri girişi yapmanızı sağlayan bağlantı alanıdır.
@@ -287,19 +293,11 @@ Kişisel Telegram botunuz size portföyünüzdeki bir varlığın bir gün içer
 </p>
 
 * ### Telegram Ödeme Hatırlatıcısı
-Kişisel Telegram botunuz size ödemenin olduğu gün ve bir gün öncesinde uyarı mesajı gönderir.
+Sabah saatlerinde gönderilen tüm dağınık bildirimler ve alarmlar tek bir çatı altında birleştirildi! Her sabah saat 09:00'da; bugün ve yarın ödenecekleri, son 5 gündeki yaklaşan ödemeleri, bekleyen aksiyonları ve 14 günlük nakit/likidite durum analizini tek bir özet ajanda halinde hem telefon bildirim panelinden hem de uygulama içinden alabilirsiniz.
 <p align="center">
-  <img src="gorseller/telegram%20bugün%20ödeme.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
-</p>
-<p align="center">
-  <img src="gorseller/telegram%20ay%20sonu%20raporu.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
+  <img src="gorseller/bildirimtelegram.jpg" alt="Telegram Ödeme Hatırlatıcısı" width="300">
 </p>
 
-* ### Telegram Ödeme İçin Nakit Hatırlatıcısı
-Kişisel Telegram botunuz size önümüzdeki 14 günün ödemesi kadar TRY varlığınız yok ise bir uyarı mesajı gönderir.
-<p align="center">
-  <img src="gorseller/telegram%20iki%20haftalık%20ödeme.jpg" alt="Telegram Ödeme İçin Nakit Hatırlatıcısı" width="300">
-</p>
 
 * ### Telegram Harcama Gideri
 Kişisel Telegram botunuza hızlıca giderlerinizi ekleyebilirsiniz. Sisteme belirlediğiniz kart kuralları dahilinde ödeme kartını ve ödeme tarihini otomatik çeker ve sisteme işler.
