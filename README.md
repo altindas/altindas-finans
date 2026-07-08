@@ -44,19 +44,19 @@ Uygulamanın genel özetini sunan, toplam varlıklarınızı, güncel kâr/zarar
 </p>
 
 ### Portföy Sayfası - Varlıklar Ekranı
-Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin liste halinde detaylandırıldığı ve anlık değerlerinin takip edildiği ekrandır. Veriler eklendikçe her bir kartın içerisinde o ürüne ait birim fiyat değişim grafikleri oluşacaktır.
+Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu, döviz ve kripto gibi tüm varlık kalemlerinin liste halinde detaylandırıldığı ve anlık değerlerinin takip edildiği ekrandır. Veriler eklendikçe her bir kartın içerisinde o ürüne ait birim fiyat değişim grafikleri oluşacaktır.
 <p align="center">
   <img src="gorseller/Portfoy%20ana%20syafa%20devamı.jpg" alt="Portföy Sayfası - Varlıklar Ekranı" width="300">
 </p>
 
 ### Portföy Sayfası - Varlık Ekleme Ekranı
-Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin portföye eklenebildiği ekrandır.
+Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu, döviz ve kripto gibi tüm varlık kalemlerinin portföye eklenebildiği ekrandır.
 <p align="center">
   <img src="gorseller/Yeni%20varlık%20ekle.jpg" alt="Portföy Sayfası - Varlık Ekleme Ekranı" width="300">
 </p>
 
 ### Portföy Sayfası - Varlık İşlem Geçmişi Ekranı
-Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu ve döviz gibi tüm varlık kalemlerinin geçmiş hareketlerinin görüntülenebildiği ve düzenlenebildiği ekrandır.
+Sahip olduğunuz altın, gümüş, hisse senedi, yatırım fonu, döviz ve kripto gibi tüm varlık kalemlerinin geçmiş hareketlerinin görüntülenebildiği ve düzenlenebildiği ekrandır.
 <p align="center">
   <img src="gorseller/portfoy_kart_detay.jpeg" alt="Portföy Sayfası - Varlık İşlem Geçmişi Ekranı" width="300">
 </p>
@@ -380,7 +380,7 @@ Finansal verilerinizin korunmasını desteklemek amacıyla uygulamaya PIN kodu v
 ## 🔒 Gizlilik ve Güvenlik Odaklı Mimari
 
 * **Banka Entegrasyonu Yoktur:** Uygulama, banka veya aracı kurum hesaplarınıza asla bağlanmaz. Finansal şifrelerinizi kesinlikle talep etmez.
-* **Verileriniz Sizin Kontrolünüzde:** Bilgileriniz Firebase altyapısında size özel olarak şifrelenir. Dilediğiniz zaman tüm geçmişinizi ve hesabınızı tek tuşla kalıcı olarak silebilirsiniz.
+* **Verileriniz Sizin Kontrolünüzde:** Bilgileriniz Google altyapısında size özel olarak şifrelenir. Dilediğiniz zaman tüm geçmişinizi ve hesabınızı tek tuşla kalıcı olarak silebilirsiniz.
 
 ---
 
