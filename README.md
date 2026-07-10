@@ -270,10 +270,10 @@ Telegram entegrasyonu kullanmak istemeyen kullanıcılar için tasarlanan yeni b
 
 ### Yapay Zeka Bütçe ve Portföy Koçu
 * **Yapay Zeka Entegrasyonu**
-    Portföy dağılımınızı, harcama alışkanlıklarınızı ve borç projeksiyonlarınızı analiz ederek size özel finansal durum raporları ve bütçe simülasyonları hazırlayan, Google Gemini altyapılı akıllı asistan modülüdür.
-    Bağlamsal Durum Analizi: Yapay zeka, arka planda mevcut varlık dağılım oranlarınızı, aylık gelir/gider matrisinizi, bütçe limitlerinizi ve 30 - 90 - 180 günlük borç yükümlülüklerinizi inceleyerek nokta atışı geri bildirimler sunar.
-    Canlı Google Arama Desteği: Google Arama aracı entegrasyonu sayesinde borsa (BIST) hareketlerini, TEFAS fon getirilerini ve küresel piyasa bültenlerini internetten anlık tarayarak güncel makro ekonomik haberleri bütçe koçluğu çerçevesinde yorumlar.
-    Kopyalama Desteği: Önerilen analizleri tek tuşla panoya kopyalayabilirsiniz.
+* Portföy dağılımınızı, harcama alışkanlıklarınızı ve borç projeksiyonlarınızı analiz ederek size özel finansal durum raporları ve bütçe simülasyonları hazırlayan, Google Gemini altyapılı akıllı asistan modülüdür.
+* Bağlamsal Durum Analizi: Yapay zeka, arka planda mevcut varlık dağılım oranlarınızı, aylık gelir/gider matrisinizi, bütçe limitlerinizi ve 30 - 90 - 180 günlük borç yükümlülüklerinizi inceleyerek nokta atışı geri bildirimler sunar.
+* Canlı Google Arama Desteği: Google Arama aracı entegrasyonu sayesinde borsa (BIST) hareketlerini, TEFAS fon getirilerini ve küresel piyasa bültenlerini internetten anlık tarayarak güncel makro ekonomik haberleri bütçe koçluğu çerçevesinde yorumlar.
+* Kopyalama Desteği: Önerilen analizleri tek tuşla panoya kopyalayabilirsiniz.
   <p align="center">
   <img src="gorseller/yapayzeka1.jpeg" alt="Yapay Zeka" width="300">
   </p>
