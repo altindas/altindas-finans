@@ -290,6 +290,14 @@ Telegram entegrasyonu kullanmak istemeyen kullanıcılar için tasarlanan yeni b
   <img src="gorseller/yapayzeka5.jpeg" alt="Yapay Zeka" width="300">
   </p>
 
+* **Haftalık Ekonomik Takvim & Borsa Tatil Takvimi**
+* Her Pazar günü, yeni haftanın kritik ekonomik verilerini (enflasyon, faiz kararları, işsizlik oranları vb.) ve küresel piyasaların kapalı olduğu resmi tatil günlerini otomatik olarak analiz edip iletir. Makroekonomik gündemi önceden sunarak bütçe ve portföy stratejilerinizi daha rasyonel yönetmenize destek olur.
+   <p align="center">
+  <img src="gorseller/haftalikekonomiktakvim.jpg" alt="Yapay Zeka" width="300">
+  </p>
+   <p align="center">
+  <img src="gorseller/haftalikborsatatil.jpg" alt="Yapay Zeka" width="300">
+  </p>
 
 * ### Telegram Bağlantı Kutucuğu
 Kişisel Telegram botunuzu sisteme entegre ederek günlük/haftalık otomatik bildirimler almanızı ve doğal dilde mesajlarla hızlı veri girişi yapmanızı sağlayan bağlantı alanıdır.
