@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altindas Finans - Estetik Video Reklamı</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0f14;
+        }
+        /* Pürüzsüz Minimalist Metin Giriş Animasyonu (GPU Hızlandırmalı) */
+        @keyframes minimalistRise {
+            0% { transform: translate3d(0, 15px, 0); opacity: 0; filter: blur(2px); }
+            100% { transform: translate3d(0, 0, 0); opacity: 1; filter: blur(0); }
+        }
+        .animate-rise {
+            animation: minimalistRise 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
+        }
+        /* Yumuşak Arka Plan Bokeh Işıması */
+        @keyframes gentleFloat {
+            0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+            50% { transform: translate3d(15px, -15px, 0) scale(1.03); }
+        }
+        .bokeh-glow {
+            animation: gentleFloat 8s ease-in-out infinite;
+            will-change: transform;
+        }
+        /* Kart Giriş Animasyonu (Gecikmesiz Pop) */
+        @keyframes cardPop {
+            0% { transform: translate3d(0, 5px, 0) scale(0.97); opacity: 0; }
+            100% { transform: translate3d(0, 0, 0) scale(1); opacity: 1; }
+        }
+        .card-active {
+            animation: cardPop 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            will-change: transform, opacity;
+        }
+        /* Element Capture API İçin Stacking Context ve Düzleştirme Kalkanı */
+        #videoCanvas {
+            isolation: isolate;
+            transform-style: flat;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen flex flex-col md:flex-row items-center justify-center select-none overflow-hidden">
+
+    <!-- REKLAM KONTROL SEKMESİ (Zorlanmadan kontrol etmeniz için) -->
+    <div class="w-full md:w-80 bg-slate-900 border-b md:border-b-0 md:border-r border-slate-800 p-6 flex flex-col shrink-0 h-auto md:h-full z-50">
+        <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center border border-emerald-500/20">
+                <i class="fas fa-clapperboard text-lg animate-pulse"></i>
+            </div>
+            <div>
+                <h2 class="font-bold text-sm tracking-wide text-white">Altindas Finans</h2>
+                <p class="text-[9px] text-emerald-400 font-extrabold uppercase tracking-widest">Estetik Video Studio</p>
+            </div>
+        </div>
+        
+        <p class="text-xs text-slate-400 mb-6 leading-relaxed">Aşağıdaki kontrolleri kullanarak 15 saniyelik estetik video reklamını başlatabilir, durdurabilir veya başa sarabilirsiniz.</p>
+
+        <div class="flex flex-col gap-2">
+            <button onclick="playVideo()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+                <i class="fas fa-play"></i> Videoyu Başlat
+            </button>
+            <button onclick="pauseVideo()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+                <i class="fas fa-pause"></i> Duraklat
+            </button>
+            <button onclick="resetVideo()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all">
+                <i class="fas fa-redo"></i> Sıfırla / Başa Sar
+            </button>
+            <!-- Entegre HD Video Kaydedici -->
+            <button onclick="startScreenRecording()" id="btnRecordVideo" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-600/10">
+                <i class="fas fa-video"></i> <span id="btnRecordText">Videoyu Kaydet & İndir</span>
+            </button>
+        </div>
+
+        <div class="mt-auto pt-6 border-t border-slate-800 text-center text-[10px] text-slate-500">
+            Video Süresi: <span id="timerText" class="font-bold text-white">0.0</span> / 15.0 sn
+        </div>
+    </div>
+
+    <!-- HİKAYE ÇERÇEVESİ (9:16 Dikey Reklam Kadrajı) -->
+    <div class="flex-grow h-full flex items-center justify-center bg-[#070911] p-4 relative">
+        
+        <!-- VİDEO ALANI -->
+        <div id="videoCanvas" class="w-[360px] h-[640px] rounded-3xl shadow-2xl relative overflow-hidden shrink-0 flex flex-col justify-between p-10 transition-all duration-500 bg-[#fbfbf8] text-[#0f172a] border border-slate-200">
+            
+            <!-- SOFT PASTEL BOKEH ARKA PLAN KATMANLARI (Mizahi yeşil/pembe sızıntılar) -->
+            <div id="bokehGlows" class="absolute inset-0 z-0 transition-opacity duration-500">
+                <div class="absolute top-10 left-10 w-44 h-44 rounded-full bg-emerald-500/10 blur-[40px] bokeh-glow"></div>
+                <div class="absolute bottom-20 right-10 w-44 h-44 rounded-full bg-pink-500/10 blur-[40px] bokeh-glow" style="animation-delay: -3s;"></div>
+            </div>
+
+            <!-- 1. ÜST BAR (ZAMAN PROGRESS GÖSTERGESİ) -->
+            <div class="relative z-20 w-full flex flex-col gap-2 shrink-0">
+                <div class="flex gap-1 w-full">
+                    <div class="h-1 flex-1 bg-black/10 rounded-full overflow-hidden"><div id="pBar1" class="h-full bg-slate-900 w-0 transition-all duration-100 ease-linear"></div></div>
+                    <div class="h-1 flex-1 bg-black/10 rounded-full overflow-hidden"><div id="pBar2" class="h-full bg-slate-900 w-0 transition-all duration-100 ease-linear"></div></div>
+                    <div class="h-1 flex-1 bg-black/10 rounded-full overflow-hidden"><div id="pBar3" class="h-full bg-slate-900 w-0 transition-all duration-100 ease-linear"></div></div>
+                    <div class="h-1 flex-1 bg-black/10 rounded-full overflow-hidden"><div id="pBar4" class="h-full bg-slate-900 w-0 transition-all duration-100 ease-linear"></div></div>
+                    <div class="h-1 flex-1 bg-black/10 rounded-full overflow-hidden"><div id="pBar5" class="h-full bg-slate-900 w-0 transition-all duration-100 ease-linear"></div></div>
+                </div>
+            </div>
+
+            <!-- 2. MERKEZİ DİNAMİK SAHNE ALANI -->
+            <div id="sceneContainer" class="relative z-20 w-full flex-grow flex flex-col justify-center items-center">
+                <!-- Sahneler JS ile buraya çizilecektir -->
+            </div>
+
+            <!-- 3. ALT MARKA ALANI (Tailwind Çakışması Giderilmiş Saf CSS Sürümü) -->
+            <div id="videoFooter" class="relative z-20 flex justify-between items-center w-full shrink-0 border-t border-black/5 pt-4 transition-all duration-500">
+                <div class="flex items-center gap-1.5">
+                    <!-- Google Play Mağaza Butonu -->
+                    <div id="btnVideoPlayStore" class="rounded-lg px-2.5 py-1 flex items-center gap-1.5 select-none transition-colors duration-300" style="height: 32px; border: 1px solid rgba(15, 23, 42, 0.08); background-color: rgba(15, 23, 42, 0.05);">
+                        <i class="fab fa-google-play text-[10px]" style="color: #0f172a;"></i>
+                        <div class="text-left leading-none" style="height: 24px; display: flex; flex-direction: column; justify-content: center;">
+                            <div class="text-[4px] uppercase tracking-widest font-bold" style="line-height: 1.2; color: rgba(15, 23, 42, 0.5);">GOOGLE PLAY</div>
+                            <div class="text-[7px] font-bold" style="line-height: 1.2; color: #0f172a;">Hemen İndir</div>
+                        </div>
+                    </div>
+                    <!-- Web Sitesi Bağlantısı -->
+                    <div id="btnVideoWebsite" class="rounded-lg px-2.5 py-1 flex items-center gap-1.5 select-none transition-colors duration-300" style="height: 32px; border: 1px solid rgba(15, 23, 42, 0.08); background-color: rgba(15, 23, 42, 0.05);">
+                        <i class="fas fa-globe text-[10px]" style="color: #0f172a;"></i>
+                        <div class="text-left leading-none" style="height: 24px; display: flex; flex-direction: column; justify-content: center;">
+                            <div class="text-[4px] uppercase tracking-widest font-bold" style="line-height: 1.2; color: rgba(15, 23, 42, 0.5);">WEB SİTESİ</div>
+                            <div class="text-[7px] font-bold" style="line-height: 1.2; color: #0f172a;">github.io</div>
+                        </div>
+                    </div>
+                </div>
+                <span id="footerText" class="text-[7px] font-extrabold tracking-widest" style="color: rgba(15, 23, 42, 0.5);">Altindas Finans</span>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT: SAHNE HIZALAYICI VE GEÇİŞ KODLARI -->
+    <script>
+        // 15 Saniyelik 5 Sahneden Oluşan Minimalist "Hatırlaç" Akışlı "Altindas Finans" Reklam Şablonu
+        let elapsedMilliseconds = 0;
+        let isPlaying = false;
+        let playbackInterval = null;
+        const tickRate = 50; 
+        const totalDurationMs = 15000;
+
+        // Akıcı Animasyon Durum Takipçileri (Saniyede 60 Kare Kesintisiz Akış İçin)
+        let scene2States = { card1: false, card2: false, card3: false, card4: false };
+        let scene3States = { avM: false, avO: false, avY: false, avA: false, avH: false };
+
+        // Sahneler değiştikçe durum takipçilerini sıfırlama fonksiyonu
+        function resetAnimationStates() {
+            scene2States = { card1: false, card2: false, card3: false, card4: false };
+            scene3States = { avM: false, avO: false, avY: false, avA: false, avH: false };
+        }
+
+        // Oynatıcı Başlatıcı
+        function startVideo() {
+            if (isPlaying) return;
+            isPlaying = true;
+            playbackInterval = setInterval(() => {
+                elapsedMilliseconds += tickRate;
+                if (elapsedMilliseconds >= totalDurationMs) {
+                    elapsedMilliseconds = 0; // Başa sar (Loop)
+                }
+                document.getElementById('timerText').innerText = (elapsedMilliseconds / 1000).toFixed(1);
+                updateProgressBars();
+                renderScene();
+            }, tickRate);
+        }
+
+        function pauseVideo() {
+            isPlaying = false;
+            clearInterval(playbackInterval);
+        }
+
+        function playVideo() {
+            startVideo();
+        }
+
+        function resetVideo() {
+            stopVideo();
+            elapsedMilliseconds = 0;
+            resetAnimationStates(); // Animasyon durumlarını sıfırla
+            document.getElementById('timerText').innerText = "0.0";
+            updateProgressBars();
+            renderScene();
+        }
+
+        function stopVideo() {
+            isPlaying = false;
+            clearInterval(playbackInterval);
+        }
+
+        // Zaman Çizgisi Barlarını Güncelleme (5 Eşit Sahne - Her biri 3.0 saniye)
+        function updateProgressBars() {
+            const p1 = document.getElementById('pBar1');
+            const p2 = document.getElementById('pBar2');
+            const p3 = document.getElementById('pBar3');
+            const p4 = document.getElementById('pBar4');
+            const p5 = document.getElementById('pBar5');
+
+            const ms = elapsedMilliseconds;
+
+            // 1. Sahne (0-3 sn)
+            if (ms < 3000) {
+                p1.style.width = (ms / 3000 * 100) + "%";
+                p2.style.width = "0%"; p3.style.width = "0%"; p4.style.width = "0%"; p5.style.width = "0%";
+            } 
+            // 2. Sahne (3-6 sn)
+            else if (ms < 6000) {
+                p1.style.width = "100%";
+                p2.style.width = ((ms - 3000) / 3000 * 100) + "%";
+                p3.style.width = "0%"; p4.style.width = "0%"; p5.style.width = "0%";
+            } 
+            // 3. Sahne (6-9 sn)
+            else if (ms < 9000) {
+                p1.style.width = "100%"; p2.style.width = "100%";
+                p3.style.width = ((ms - 6000) / 3000 * 100) + "%";
+                p4.style.width = "0%"; p5.style.width = "0%";
+            } 
+            // 4. Sahne (9-12 sn)
+            else if (ms < 12000) {
+                p1.style.width = "100%"; p2.style.width = "100%"; p3.style.width = "100%";
+                p4.style.width = ((ms - 9000) / 3000 * 100) + "%";
+                p5.style.width = "0%";
+            } 
+            // 5. Sahne (12-15 sn)
+            else {
+                p1.style.width = "100%"; p2.style.width = "100%"; p3.style.width = "100%"; p4.style.width = "100%";
+                p5.style.width = ((ms - 12000) / 3000 * 100) + "%";
+            }
+        }
+
+        let currentActiveSceneIndex = -1;
+
+        // Sahne Çizim Motoru
+        function renderScene() {
+            const ms = elapsedMilliseconds;
+            let sceneIndex = 0;
+
+            if (ms < 3000) sceneIndex = 1;
+            else if (ms < 6000) sceneIndex = 2;
+            else if (ms < 9000) sceneIndex = 3;
+            else if (ms < 12000) sceneIndex = 4;
+            else sceneIndex = 5;
+
+            // Eğer sahne değişmediyse yeniden çizip kırpışma (flicker) yapma
+            if (currentActiveSceneIndex === sceneIndex) {
+                // Sahnelerin içindeki milisaniye bazlı alt onay animasyonlarını tetikle (Tekrarlı DOM tetiklemesi engellendi)
+                if (sceneIndex === 2) updateScene2Timeline();
+                if (sceneIndex === 3) updateScene3Timeline();
+                return;
+            }
+            currentActiveSceneIndex = sceneIndex;
+            resetAnimationStates(); // Sahne ilk kez yüklendiğinde durumları temizle
+
+            const container = document.getElementById('sceneContainer');
+            const canvas = document.getElementById('videoCanvas');
+            const glows = document.getElementById('bokehGlows');
+            const footer = document.getElementById('videoFooter');
+
+            // Varsayılan Stil Ayarları (İlk 4 Sahne Fildişi)
+            canvas.style.backgroundColor = "#fbfbf8";
+            canvas.style.borderColor = "rgba(226, 232, 240, 1)";
+            glows.style.opacity = "1";
+            footer.style.borderColor = "rgba(0, 0, 0, 0.05)";
+            
+            // Logoların ve Alt Bilgilerin Koyu Olması (İlk 4 Sahne)
+            setElementTextContrast('light');
+
+            if (sceneIndex === 1) {
+                // ==========================================
+                // SAHNE 1: GİRİŞ / HOŞ GELDİNİZ (0-3 sn)
+                // ==========================================
+                container.innerHTML = `
+                    <!-- Küçük Üst Etiket -->
+                    <div class="px-2.5 py-0.5 rounded-full bg-slate-900/5 border border-slate-900/10 text-[7px] font-bold text-slate-800 tracking-wider mb-6 flex items-center gap-1 opacity-0 animate-rise">
+                        <i class="fas fa-check-circle text-emerald-500"></i> Bütçele
+                    </div>
+                    
+                    <!-- Ortadaki Bildirim Çanı İkonu (Orijinal Uygulama Logosu Entegre) -->
+                    <div class="w-12 h-12 bg-emerald-500/10 text-emerald-500 rounded-2xl flex items-center justify-center border border-emerald-500/15 mb-4 relative opacity-0 animate-rise" style="animation-delay: 0.1s;">
+                        <div class="w-6 h-6">
+                            <svg viewBox="104 132 302 262" class="w-full h-full" fill="#252F44" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M 215.00 199.00 C 195.52 220.10 183.46 250.97 166.77 275.77 C 160.13 297.32 109.90 342.06 152.00 348.00 C 182.40 343.93 211.03 325.15 227.23 298.23 C 237.69 267.52 206.98 233.71 215.00 199.00 Z" />
+                                <path d="M 260.00 140.00 C 224.75 156.74 228.72 213.62 236.22 247.78 C 245.73 280.64 268.15 310.48 297.77 328.23 C 318.52 346.72 401.15 364.46 367.92 316.08 C 331.26 258.13 301.67 192.97 260.00 140.00 Z" />
+                                <path d="M 248.00 297.00 C 239.71 314.93 226.19 340.09 201.01 341.99 C 219.38 349.05 243.07 364.36 245.32 388.66 C 252.06 370.49 267.93 346.28 291.99 344.01 C 273.46 336.80 249.00 322.37 248.00 297.00 Z" />
+                            </svg>
+                        </div>
+                        <span class="absolute -top-1.5 -right-1.5 w-4 h-4 bg-red-500 text-white rounded-full flex items-center justify-center text-[7px] font-bold border border-[#fbfbf8]">1</span>
+                    </div>
+
+                    <!-- Ana Tipografi -->
+                    <h1 class="text-xl font-black text-[#0f172a] leading-tight tracking-tight text-center uppercase tracking-wide opacity-0 animate-rise" style="animation-delay: 0.2s; font-family:'Poppins', sans-serif;">
+                        BÜTÇELE,<br>KAÇIRMA.
+                    </h1>
+                    <p class="text-[9px] text-slate-500 mt-2 font-medium tracking-wide text-center opacity-0 animate-rise" style="animation-delay: 0.3s;">
+                        Siz yorulmayın — raporlamak bizim işimiz.
+                    </p>
+                `;
+            } 
+            else if (sceneIndex === 2) {
+                // ==========================================
+                // SAHNE 2: NELERİ Mİ TAKİP EDERİZ? (3-6 sn)
+                // ==========================================
+                container.innerHTML = `
+                    <div class="text-left w-full px-4">
+                        <div class="text-[7px] text-slate-400 font-extrabold tracking-widest uppercase mb-1 opacity-0 animate-rise">— NE Mİ TAKİP EDER?</div>
+                        <h2 class="text-base font-black text-[#0f172a] leading-none mb-4 opacity-0 animate-rise" style="animation-delay: 0.1s;">Gün boyu, yanınızda.</h2>
+                        
+                        <div class="flex flex-col gap-2 w-full">
+                            <!-- Kart 1 -->
+                            <div id="s2-card1" class="opacity-0 bg-white border border-slate-100 rounded-xl p-2.5 flex items-center justify-between text-[8px] font-semibold text-slate-800 shadow-sm">
+                                <span class="flex items-center gap-2"><i class="fas fa-cart-shopping text-emerald-500"></i> Harcamalarınızı</span>
+                                <i class="fas fa-check-circle text-emerald-500 text-[10px] opacity-0 transition-opacity duration-200"></i>
+                            </div>
+                            <!-- Kart 2 -->
+                            <div id="s2-card2" class="opacity-0 bg-white border border-slate-100 rounded-xl p-2.5 flex items-center justify-between text-[8px] font-semibold text-slate-800 shadow-sm">
+                                <span class="flex items-center gap-2"><i class="fas fa-file-invoice-dollar text-blue-500"></i> Fatura & Aidatları</span>
+                                <i class="fas fa-check-circle text-emerald-500 text-[10px] opacity-0 transition-opacity duration-200"></i>
+                            </div>
+                            <!-- Kart 3 -->
+                            <div id="s2-card3" class="opacity-0 bg-white border border-slate-100 rounded-xl p-2.5 flex items-center justify-between text-[8px] font-semibold text-slate-800 shadow-sm">
+                                <span class="flex items-center gap-2"><i class="fas fa-coins text-yellow-500"></i> Yatırımlarınızı</span>
+                                <i class="fas fa-check-circle text-emerald-500 text-[10px] opacity-0 transition-opacity duration-200"></i>
+                            </div>
+                            <!-- Kart 4 -->
+                            <div id="s2-card4" class="opacity-0 bg-white border border-slate-100 rounded-xl p-2.5 flex items-center justify-between text-[8px] font-semibold text-slate-800 shadow-sm">
+                                <span class="flex items-center gap-2"><i class="fas fa-shield-alt text-purple-500"></i> Aylık Bütçenizi</span>
+                                <i class="fas fa-check-circle text-emerald-500 text-[10px] opacity-0 transition-opacity duration-200"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                // Zaman tetiğini anında sıfırla ve başlat
+                updateScene2Timeline();
+            } 
+            else if (sceneIndex === 3) {
+                // ==========================================
+                // SAHNE 3: AİLE VE BES ENTEGRASYONU (6-9 sn)
+                // ==========================================
+                container.innerHTML = `
+                    <div class="text-center w-full px-4 flex flex-col items-center">
+                        <div class="text-[7px] text-slate-400 font-extrabold tracking-widest uppercase mb-1 opacity-0 animate-rise">— BÜYÜYEN BİR AİLE</div>
+                        <h2 class="text-base font-black text-[#0f172a] leading-tight mb-2 opacity-0 animate-rise" style="animation-delay: 0.1s;">Altindas Finans<br>ailesine katılın.</h2>
+                        <p class="text-[8px] text-slate-500 mb-6 leading-relaxed max-w-[200px] opacity-0 animate-rise" style="animation-delay: 0.2s;">Varlıklarınızın değişimlerini, ödeme dengenizi kontrol edin.</p>
+                        
+                        <!-- Pop-up Balon Aile Üyeleri (Mehmet, Özlem, Yaman, Altindas) -->
+                        <div class="flex gap-2 justify-center items-center h-12 relative w-full">
+                            <div id="avatarM" class="opacity-0 w-8 h-8 rounded-full bg-blue-500 text-white font-extrabold text-[10px] flex items-center justify-center border border-white shadow">M</div>
+                            <div id="avatarO" class="opacity-0 w-8 h-8 rounded-full bg-pink-500 text-white font-extrabold text-[10px] flex items-center justify-center border border-white shadow">Ö</div>
+                            <div id="avatarY" class="opacity-0 w-8 h-8 rounded-full bg-yellow-500 text-white font-extrabold text-[10px] flex items-center justify-center border border-white shadow">Y</div>
+                            <div id="avatarA" class="opacity-0 w-8 h-8 rounded-full bg-emerald-500 text-white font-extrabold text-[10px] flex items-center justify-center border border-white shadow">A</div>
+                            <div id="avatarHeart" class="opacity-0 text-red-500 text-xs ml-1"><i class="fas fa-heart animate-pulse"></i></div>
+                        </div>
+                    </div>
+                `;
+                updateScene3Timeline();
+            } 
+            else if (sceneIndex === 4) {
+                // ==========================================
+                // SAHNE 4: SÖZÜMÜZ VE SÖZLEŞME (9-12 sn)
+                // ==========================================
+                container.innerHTML = `
+                    <div class="text-left w-full px-4">
+                        <div class="text-[7px] text-slate-400 font-extrabold tracking-widest uppercase mb-1 opacity-0 animate-rise">— SÖZÜMÜZ</div>
+                        <h1 class="text-[20px] font-black text-[#0f172a] leading-snug mb-6 opacity-0 animate-rise" style="animation-delay: 0.1s; font-family:'Poppins', sans-serif;">
+                            Kullanın,<br>işinize yarayalım.
+                        </h1>
+                        
+                        <div class="flex gap-4 border-t border-slate-100 pt-4 opacity-0 animate-rise" style="animation-delay: 0.2s;">
+                            <div>
+                                <div class="text-[8px] font-bold text-slate-800">Ücretsiz</div>
+                                <div class="text-[7px] text-slate-400 mt-0.5">Sınırsız bütçe takibi</div>
+                            </div>
+                            <div class="border-l border-slate-100 pl-4">
+                                <div class="text-[8px] font-bold text-slate-800">Kıyaslama</div>
+                                <div class="text-[7px] text-slate-400 mt-0.5">Portföy gelişiminizi takip edin</div>
+                            </div>
+                            <div class="border-l border-slate-100 pl-4">
+                                <div class="text-[8px] font-bold text-slate-800">Mali Koç</div>
+                                <div class="text-[7px] text-slate-400 mt-0.5">Yapay zeka destekli analizler</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } 
+            else {
+                // ==========================================
+                // SAHNE 5: KAPANIŞ / LOGO VE ÇAĞRI (12-15 sn)
+                // ==========================================
+                // Koyu Zümrüt/Orman Yeşili Akıcı Kapanış Ekranı (Prestijli Finans Rengi)
+                canvas.style.backgroundColor = "#98cde3"; 
+                canvas.style.borderColor = "#04160e";
+                glows.style.opacity = "0"; // Bokeh ışımalarını kapat
+                footer.style.borderColor = "rgba(255, 255, 255, 0.1)";
+
+                setElementTextContrast('dark'); // Yazıları beyaza dönüştür
+
+                container.innerHTML = `
+                    <!-- Vektörel Logo (Büyük Boyut) -->
+                    <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 mb-4 opacity-0 animate-rise">
+                        <svg viewBox="104 132 302 262" class="w-10 h-10" fill="#252F44" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M 215.00 199.00 C 195.52 220.10 183.46 250.97 166.77 275.77 C 160.13 297.32 109.90 342.06 152.00 348.00 C 182.40 343.93 211.03 325.15 227.23 298.23 C 237.69 267.52 206.98 233.71 215.00 199.00 Z" />
+                            <path d="M 260.00 140.00 C 224.75 156.74 228.72 213.62 236.22 247.78 C 245.73 280.64 268.15 310.48 297.77 328.23 C 318.52 346.72 401.15 364.46 367.92 316.08 C 331.26 258.13 301.67 192.97 260.00 140.00 Z" />
+                            <path d="M 248.00 297.00 C 239.71 314.93 226.19 340.09 201.01 341.99 C 219.38 349.05 243.07 364.36 245.32 388.66 C 252.06 370.49 267.93 346.28 291.99 344.01 C 273.46 336.80 249.00 322.37 248.00 297.00 Z" />
+                        </svg>
+                    </div>
+
+                    <!-- Yazı Renkleri Okyanus Mavisi Zeminle Uyumlu Olarak Kalibre Edildi -->
+                    <h1 class="text-xl font-black tracking-wide text-center opacity-0 animate-rise" style="color: #252F44; animation-delay: 0.1s;">
+                        Altindas Finans
+                    </h1>
+                    <p class="text-[8px] mt-1 font-semibold tracking-wide text-center opacity-0 animate-rise" style="color: #252F44; animation-delay: 0.2s;">
+                        Mali dengenizi kurun, geleceğinizi özgürleştirin.
+                    </p>
+
+                    <!-- Pulse Efektli İndirme Butonu (Renk Kalibre Edilmiş Sürüm) -->
+                    <button class="mt-8 bg-white text-[10px] font-black px-6 py-2.5 rounded-full border border-emerald-500/10 shadow-lg tracking-wider animate-bounce flex items-center gap-2" style="color: #252F44;">
+                        <i class="fas fa-cloud-arrow-down" style="color: #045c80;"></i> ÜCRETSİZ İNDİRİN
+                    </button>
+                `;
+            }
+        }
+
+        // Sahne 2 Zaman Ayarlı Alt Animasyon Akışı (Hassas ve Lagsiz Tek Seferlik Yazım)
+        function updateScene2Timeline() {
+            const ms = elapsedMilliseconds - 3000; 
+            
+            const card1 = document.getElementById('s2-card1');
+            const card2 = document.getElementById('s2-card2');
+            const card3 = document.getElementById('s2-card3');
+            const card4 = document.getElementById('s2-card4');
+
+            if (!card1 || !card2 || !card3 || !card4) return;
+
+            // Kart 1
+            if (ms >= 300 && !scene2States.card1) {
+                scene2States.card1 = true;
+                card1.classList.add('card-active'); card1.style.opacity = "1";
+                setTimeout(() => { if (card1.querySelector('i.fa-check-circle')) card1.querySelector('i.fa-check-circle').style.opacity = "1"; }, 120);
+            }
+            // Kart 2
+            if (ms >= 800 && !scene2States.card2) {
+                scene2States.card2 = true;
+                card2.classList.add('card-active'); card2.style.opacity = "1";
+                setTimeout(() => { if (card2.querySelector('i.fa-check-circle')) card2.querySelector('i.fa-check-circle').style.opacity = "1"; }, 120);
+            }
+            // Kart 3
+            if (ms >= 1300 && !scene2States.card3) {
+                scene2States.card3 = true;
+                card3.classList.add('card-active'); card3.style.opacity = "1";
+                setTimeout(() => { if (card3.querySelector('i.fa-check-circle')) card3.querySelector('i.fa-check-circle').style.opacity = "1"; }, 120);
+            }
+            // Kart 4
+            if (ms >= 1800 && !scene2States.card4) {
+                scene2States.card4 = true;
+                card4.classList.add('card-active'); card4.style.opacity = "1";
+                setTimeout(() => { if (card4.querySelector('i.fa-check-circle')) card4.querySelector('i.fa-check-circle').style.opacity = "1"; }, 120);
+            }
+        }
+
+        // Sahne 3 Zaman Ayarlı Balon İsim Akışı (Hassas ve Lagsiz Tek Seferlik Yazım)
+        function updateScene3Timeline() {
+            const ms = elapsedMilliseconds - 6000;
+
+            const avM = document.getElementById('avatarM');
+            const avO = document.getElementById('avatarO');
+            const avY = document.getElementById('avatarY');
+            const avA = document.getElementById('avatarA');
+            const avH = document.getElementById('avatarHeart');
+
+            if (!avM || !avO || !avY || !avA || !avH) return;
+
+            if (ms >= 300 && !scene3States.avM) { scene3States.avM = true; avM.classList.add('card-active'); avM.style.opacity = "1"; }
+            if (ms >= 700 && !scene3States.avO) { scene3States.avO = true; avO.classList.add('card-active'); avO.style.opacity = "1"; }
+            if (ms >= 1100 && !scene3States.avY) { scene3States.avY = true; avY.classList.add('card-active'); avY.style.opacity = "1"; }
+            if (ms >= 1500 && !scene3States.avA) { scene3States.avA = true; avA.classList.add('card-active'); avA.style.opacity = "1"; }
+            if (ms >= 2000 && !scene3States.avH) { scene3States.avH = true; avH.classList.add('card-active'); avH.style.opacity = "1"; }
+        }
+
+        // Açık ve Koyu Sahne Geçişlerinde Logoların ve Butonların Kontrastı (Nokta Atışı Vektörel Sürüm)
+        function setElementTextContrast(mode) {
+            const logoText = document.getElementById('videoLogoText');
+            const logoIcon = document.getElementById('headerLogo');
+            const badge = document.getElementById('videoBadge');
+            const footer = document.getElementById('videoFooter');
+            const footerSpan = document.getElementById('footerText');
+            const btnPS = document.getElementById('btnVideoPlayStore');
+            const btnWS = document.getElementById('btnVideoWebsite');
+
+            if (!logoText || !logoIcon || !badge || !footer || !footerSpan || !btnPS || !btnWS) return;
+
+            if (mode === 'dark') {
+                logoText.style.color = "#ffffff";
+                logoIcon.querySelector('svg').setAttribute('fill', '#ffffff');
+                logoIcon.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+                logoIcon.style.borderColor = "rgba(255, 255, 255, 0.15)";
+                
+                badge.style.color = "rgba(255, 255, 255, 0.7)";
+                badge.style.backgroundColor = "rgba(0, 0, 0, 0.2)";
+                badge.style.borderColor = "rgba(255, 255, 255, 0.1)";
+
+                footerSpan.style.color = "rgba(255, 255, 255, 0.5)";
+                
+                // PlayStore Butonu (Inline Stil ve Dikey Hiyerarşi)
+                btnPS.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+                btnPS.style.borderColor = "rgba(255, 255, 255, 0.15)";
+                btnPS.querySelector('i').style.color = "#ffffff";
+                const psLabels = btnPS.querySelectorAll('div div');
+                if (psLabels.length >= 2) {
+                    psLabels[0].style.color = "rgba(255, 255, 255, 0.5)"; // GOOGLE PLAY (Gri)
+                    psLabels[1].style.color = "#ffffff"; // Hemen İndir (Beyaz)
+                }
+
+                // Web Sitesi Butonu (Inline Stil ve Dikey Hiyerarşi)
+                btnWS.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+                btnWS.style.borderColor = "rgba(255, 255, 255, 0.15)";
+                btnWS.querySelector('i').style.color = "#ffffff";
+                const wsLabels = btnWS.querySelectorAll('div div');
+                if (wsLabels.length >= 2) {
+                    wsLabels[0].style.color = "rgba(255, 255, 255, 0.5)"; // WEB SITESI (Gri)
+                    wsLabels[1].style.color = "#ffffff"; // github.io (Beyaz)
+                }
+            } else {
+                logoText.style.color = "#0f172a";
+                logoIcon.querySelector('svg').setAttribute('fill', '#10b981');
+                logoIcon.style.backgroundColor = "rgba(16, 185, 129, 0.08)";
+                logoIcon.style.borderColor = "transparent";
+                
+                badge.style.color = "#64748b";
+                badge.style.backgroundColor = "rgba(0, 0, 0, 0.05)";
+                badge.style.borderColor = "rgba(15, 23, 42, 0.08)";
+
+                footerSpan.style.color = "rgba(15, 23, 42, 0.5)";
+                
+                // PlayStore Butonu (Inline Stil ve Geri Dönüş Çözümü)
+                btnPS.style.backgroundColor = "rgba(15, 23, 42, 0.05)";
+                btnPS.style.borderColor = "rgba(15, 23, 42, 0.08)";
+                btnPS.querySelector('i').style.color = "#0f172a";
+                const psLabels = btnPS.querySelectorAll('div div');
+                if (psLabels.length >= 2) {
+                    psLabels[0].style.color = "rgba(15, 23, 42, 0.5)"; // GOOGLE PLAY (Koyu Gri)
+                    psLabels[1].style.color = "#0f172a"; // Hemen İndir (Koyu Slate)
+                }
+
+                // Web Sitesi Butonu (Inline Stil ve Geri Dönüş Çözümü)
+                btnWS.style.backgroundColor = "rgba(15, 23, 42, 0.05)";
+                btnWS.style.borderColor = "rgba(15, 23, 42, 0.08)";
+                btnWS.querySelector('i').style.color = "#0f172a";
+                const wsLabels = btnWS.querySelectorAll('div div');
+                if (wsLabels.length >= 2) {
+                    wsLabels[0].style.color = "rgba(15, 23, 42, 0.5)"; // WEB SITESI (Koyu Gri)
+                    wsLabels[1].style.color = "#0f172a"; // github.io (Koyu Slate)
+                }
+            }
+        }
+
+        function triggerHaptic() {
+            if (navigator.vibrate) {
+                navigator.vibrate(12);
+            }
+        }
+
+        // Açılış
+        window.onload = function() {
+            buildMenu();
+            resetTimeline();
+            renderScene();
+        };
+
+        // TARAYICI YEREL EKRAN REKOR_KAYDEDİCİ MODÜLÜ (Element Capture API Entegre Sürüm)
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        async function startScreenRecording() {
+            triggerHaptic();
+            const btn = document.getElementById('btnRecordVideo');
+            const text = document.getElementById('btnRecordText');
+            const target = document.getElementById('videoCanvas'); // Sadece kaydedilecek hedef alan
+            
+            try {
+                // Tarayıcıdan ekran paylaşım iznini talep et (Sadece bu sekmeyi seçmeniz istenir)
+                const stream = await navigator.mediaDevices.getDisplayMedia({
+                    preferCurrentTab: true, // Otomatik olarak aktif tarayıcı sekmesini önerir
+                    video: {
+                        width: { ideal: 1080 },  // Vektörel dikey HD standart genişliği
+                        height: { ideal: 1920 }, // Vektörel dikey HD standart yüksekliği
+                        frameRate: { ideal: 30 }
+                    },
+                    audio: false
+                });
+
+                // Element Capture API Kısıtlayıcı Kalkanı: Kaydı sadece dikey karta kilitler, menüleri kırpar!
+                const [track] = stream.getVideoTracks();
+                if (typeof RestrictionTarget !== 'undefined' && typeof RestrictionTarget.fromElement === 'function') {
+                    try {
+                        const restrictionTarget = await RestrictionTarget.fromElement(target);
+                        await track.restrictTo(restrictionTarget);
+                        console.log("Kayıt alanı başarıyla sadece dikey reklam kartı (#videoCanvas) ile kısıtlandı.");
+                    } catch (e) {
+                        console.warn("Element kısıtlama hatası (bunu bir sunucuda test edin):", e);
+                    }
+                }
+
+                text.innerText = "Kayıt Yapılıyor...";
+                btn.className = "bg-red-600 hover:bg-red-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all animate-pulse";
+                showToast("Dikey Reklam Kartı Kaydı Başlatıldı! 🎥");
+
+                recordedChunks = [];
+                
+                // Tarayıcı Codec Seçimi: Safari ve iOS için mp4, Chrome ve Android için webm/vp9 uyumluluğu
+                let mimeType = 'video/webm; codecs=vp9';
+                if (!MediaRecorder.isTypeSupported(mimeType)) {
+                    mimeType = 'video/webm';
+                }
+                if (!MediaRecorder.isTypeSupported(mimeType)) {
+                    mimeType = 'video/mp4; codecs="avc1.42E01E, mp4a.40.2"';
+                }
+                if (!MediaRecorder.isTypeSupported(mimeType)) {
+                    mimeType = 'video/mp4';
+                }
+
+                console.log("Aktif video kayıt formatı:", mimeType);
+                const options = { mimeType: mimeType };
+                mediaRecorder = new MediaRecorder(stream, options);
+
+                mediaRecorder.ondataavailable = (e) => {
+                    if (e.data.size > 0) {
+                        recordedChunks.push(e.data);
+                    }
+                };
+
+                // Kayıt tamamlandığında otomatik indirme aksiyonunu tetikle
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, { type: 'video/webm' });
+                    const url = URL.createObjectURL(blob);
+                    
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Altindas_Finans_Dikey_Reklam.webm';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+
+                    // Ekran Paylaşımını Serbest Bırak (Üstteki mavi bar söner)
+                    stream.getTracks().forEach(track => track.stop());
+
+                    text.innerText = "Videoyu Kaydet & İndir";
+                    btn.className = "bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-600/10";
+                    showToast("Video başarıyla indirildi! 🎉");
+                };
+
+                // Videoyu otomatik en başa sarıp oynatmayı başlat
+                resetVideo();
+                playVideo();
+                mediaRecorder.start();
+
+                // 15 saniye (15000ms) dolduğunda kaydı otomatik durdur
+                setTimeout(() => {
+                    if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+                        mediaRecorder.stop();
+                        stopVideo();
+                    }
+                }, totalDurationMs);
+
+            } catch (err) {
+                console.warn("Ekran kaydı başlatılamadı:", err);
+                text.innerText = "Videoyu Kaydet & İndir";
+                btn.className = "bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-lg shadow-emerald-600/10";
+                
+                // Güvenlik Uyarısı Açıklaması: Tarayıcıların file:// protokolü üzerinden getDisplayMedia çalıştırmasını engellemesi durumu
+                showToast("Tarayıcı engeli: Bu kod ancak bir sunucuda (HTTPS / sitenizde) çalışırken kaydedilebilir.", true);
+            }
+        }
+    </script>
+</body>
+</html>
