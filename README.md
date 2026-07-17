@@ -14,24 +14,30 @@
 
 # Altindas Finans 📊💰
 
-> **Varlık, BES ve gider takibi tek ekranda! Banka şifresi girmeden bütçenizi yönetin.**
+> **Mali dengenizi kurun. Geleceğinizi özgürleştirin!**
 
 Altindas Finans; varlıklarınızı, Bireysel Emeklilik (BES) birikimlerinizi ve aylık harcamalarınızı tek bir çatı altında, tamamen gizlilik odaklı olarak takip etmenize yardımcı olmak üzere tasarlanmış kapsamlı bir kişisel finansal yönetim asistanıdır.
 
 Banka şifrelerinizi veya hassas hesap bilgilerinizi hiç kimseyle paylaşmak zorunda kalmadan, bütçenizin ve yatırımlarınızın kontrolünü tamamen kendi elinize alın. Akıllı bulut senkronizasyonu ile verilerinize her an ulaşın, finansal özgürlüğünüze giden yolu bugünden planlayın!
 
----
+## 2.3.01 Güncellemesi
 
-## 🚀 Demo Hesabı ile Deneyin!
-
-Uygulamanın arayüzünü ve özelliklerini hemen keşfetmek için aşağıdaki demo hesap bilgilerini kullanabilirsiniz:
-
-* **E-mail:** `demo@altindasfinans.com`
-* **Şifre:** `demodemo`
-
-> ⚠️ **Not:** Demo hesaptaki portföy, geçmiş işlemler ve gider verileri tamamen temsilidir. Yalnızca okuma izni aktiftir; veri ekleme/silme işlemleri kapalıdır.
+### 🔊 İnteraktif Ses Geri Bildirimli Widget'lar
+Homescreen widget entegrasyonu, kullanıcı deneyimini (UX) en üst seviyeye çıkarmak için sesli ve dokunsal geri bildirimlerle güçlendirilmiştir.
+* **Anlık Sesli Onay:** Widget üzerinden sesli şekilde hızlı gider veya varlık girişi yapılabilecektir.
 
 ---
+
+### 🏡 Maddi Varlıklar (Gayrimenkul & Araç) Entegrasyonu
+Klasik finansal enstrümanların (Borsa, Döviz, Emtia, Kripto) yanı sıra, fiziksel varlıkların da kümülatif net değer hesaplamasına dahil edilmesini sağlayan gelişmiş portföy modülüdür.
+
+#### 🏢 Gayrimenkul & Arsa Modülü
+* **Amortisman & ROI Hesaplama:** Satın alınan mülkün tarihsel kurları (TRY/USD/Gold) otomatik taranır. Aylık kira getirisi üzerinden, yatırımın kendini amorti etme süresi (Yıl bazında) ve yıllık ROI (Return on Investment) oranı döviz bağımsız olarak hesaplanır.
+* **Tapu ve Kadastro Veri İzleme:** Varlığa ait Ada No, Parsel No, Taşınmaz No, Tapu Hissesi (%) ve Tapu Tipi (Kat Mülkiyeti, Kat İrtifakı vb.) detaylı olarak saklanır.
+
+#### 🔔 Çift Katmanlı Hatırlatıcı Alarmları
+* Maddi varlıklar için tanımlanan MTV, Kasko, DASK, Konut Sigortası veya Vergi ödeme günleri için (son gün ve 1 hafta önce) bildirimler planlanır.
+
 
 ## 📸 Ekran Görüntüleri ve Detaylı Kullanım
 
