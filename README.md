@@ -20,25 +20,6 @@ Altindas Finans; varlıklarınızı, Bireysel Emeklilik (BES) birikimlerinizi ve
 
 Banka şifrelerinizi veya hassas hesap bilgilerinizi hiç kimseyle paylaşmak zorunda kalmadan, bütçenizin ve yatırımlarınızın kontrolünü tamamen kendi elinize alın. Akıllı bulut senkronizasyonu ile verilerinize her an ulaşın, finansal özgürlüğünüze giden yolu bugünden planlayın!
 
-## 2.3.01 Güncellemesi
-
-### 🔊 İnteraktif Ses Geri Bildirimli Widget'lar
-Homescreen widget entegrasyonu, kullanıcı deneyimini (UX) en üst seviyeye çıkarmak için sesli ve dokunsal geri bildirimlerle güçlendirilmiştir.
-* **Anlık Sesli Onay:** Widget üzerinden sesli şekilde hızlı gider veya varlık girişi yapılabilecektir.
-
----
-
-### 🏡 Maddi Varlıklar (Gayrimenkul & Araç) Entegrasyonu
-Klasik finansal enstrümanların (Borsa, Döviz, Emtia, Kripto) yanı sıra, fiziksel varlıkların da kümülatif net değer hesaplamasına dahil edilmesini sağlayan gelişmiş portföy modülüdür.
-
-#### 🏢 Gayrimenkul & Arsa Modülü
-* **Amortisman & ROI Hesaplama:** Satın alınan mülkün tarihsel kurları (TRY/USD/Gold) otomatik taranır. Aylık kira getirisi üzerinden, yatırımın kendini amorti etme süresi (Yıl bazında) ve yıllık ROI (Return on Investment) oranı döviz bağımsız olarak hesaplanır.
-* **Tapu ve Kadastro Veri İzleme:** Varlığa ait Ada No, Parsel No, Taşınmaz No, Tapu Hissesi (%) ve Tapu Tipi (Kat Mülkiyeti, Kat İrtifakı vb.) detaylı olarak saklanır.
-
-#### 🔔 Çift Katmanlı Hatırlatıcı Alarmları
-* Maddi varlıklar için tanımlanan MTV, Kasko, DASK, Konut Sigortası veya Vergi ödeme günleri için (son gün ve 1 hafta önce) bildirimler planlanır.
-
-
 ## 📸 Ekran Görüntüleri ve Detaylı Kullanım
 
 Altindas Finans'ın sunduğu modülleri ve kullanıcı arayüzünü aşağıda detaylıca inceleyebilirsiniz:
@@ -79,6 +60,37 @@ Aile bireylerinin BES hesaplarının portföye otomatik işlenebilmesi için "Ay
 <p align="center">
   <img src="gorseller/bes%20planlamas.jpg" alt="Bireysel Emeklilik (BES) Planlama Ekranı" width="300">
 </p>
+
+### 🏡 Maddi Varlıklar (Gayrimenkul & Araç) Entegrasyonu
+Klasik finansal enstrümanların (Borsa, Döviz, Emtia, Kripto) yanı sıra, fiziksel varlıkların da kümülatif net değer hesaplamasına dahil edilmesini sağlayan gelişmiş portföy modülüdür.
+<p align="center">
+  <img src="gorseller/varlik_anaekran.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/varlik_cesit.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+
+#### 🏢 Gayrimenkul & Arsa Modülü
+* **Amortisman & ROI Hesaplama:** Satın alınan mülkün tarihsel kurları (TRY/USD/Gold) otomatik taranır. Aylık kira getirisi üzerinden, yatırımın kendini amorti etme süresi (Yıl bazında) ve yıllık ROI (Return on Investment) oranı döviz bağımsız olarak hesaplanır.
+* **Tapu ve Kadastro Veri İzleme:** Varlığa ait Ada No, Parsel No, Taşınmaz No, Tapu Hissesi (%) ve Tapu Tipi (Kat Mülkiyeti, Kat İrtifakı vb.) detaylı olarak saklanır.
+<p align="center">
+  <img src="gorseller/varlik_kart.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/varlik_kartdetay.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/varlik_kartalissatis.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/varlik_kartdetay2.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+<p align="center">
+  <img src="gorseller/varlik_satildi.jpeg" alt="Varlık Ekranı" width="300">
+</p>
+
+#### 🔔 Çift Katmanlı Hatırlatıcı Alarmları
+* Maddi varlıklar için tanımlanan MTV, Kasko, DASK, Konut Sigortası veya Vergi ödeme günleri için (son gün ve 1 hafta önce) bildirimler planlanır.
 
 ### İşlemler Sayfası - Canlı Fiyat Sorgulama
 Yatırım araçlarının anlık piyasa fiyatlarını arama çubuğu üzerinden hızlıca sorgulayıp, güncel verilerle doğru işlem kararları almanızı sağlayan modüldür.
@@ -236,6 +248,13 @@ Ana ekrana ekleyeceğiniz "Gider Ekle" ve "Varlık Ekle" widgetleri, hayatın ko
 </p>
 <p align="center">
   <img src="gorseller/varlik_kaydedildi_bildirim.jpg" alt="Varlık - Başarılı İşlem Bildirim" width="300">
+</p>
+
+### 🔊 İnteraktif Ses Geri Bildirimli Widget'lar
+Homescreen widget entegrasyonu, kullanıcı deneyimini (UX) en üst seviyeye çıkarmak için sesli ve dokunsal geri bildirimlerle güçlendirilmiştir.
+* **Anlık Sesli Onay:** Widget üzerinden sesli şekilde hızlı gider veya varlık girişi yapılabilecektir.
+<p align="center">
+  <img src="gorseller/sesliwidget.jpwg" alt="Sesli Widget" width="300">
 </p>
 
 * ### Yeni "Mesajlar" (Uygulama İçi Bildirim Merkezi) Ekranı
