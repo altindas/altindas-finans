@@ -254,7 +254,7 @@ Ana ekrana ekleyeceğiniz "Gider Ekle" ve "Varlık Ekle" widgetleri, hayatın ko
 Homescreen widget entegrasyonu, kullanıcı deneyimini (UX) en üst seviyeye çıkarmak için sesli ve dokunsal geri bildirimlerle güçlendirilmiştir.
 * **Anlık Sesli Onay:** Widget üzerinden sesli şekilde hızlı gider veya varlık girişi yapılabilecektir.
 <p align="center">
-  <img src="gorseller/sesliwidget.jpwg" alt="Sesli Widget" width="300">
+  <img src="gorseller/sesliwidget.jpeg" alt="Sesli Widget" width="300">
 </p>
 
 * ### Yeni "Mesajlar" (Uygulama İçi Bildirim Merkezi) Ekranı
